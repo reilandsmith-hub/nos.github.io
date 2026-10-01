@@ -4,25 +4,31 @@
       <title>F>F</title>
       <style>
         body {
-          background-color: black; /* Or use the hex code #000000 */
-          color: white;
-        }
-        
-        .sans {
-          font-family: Arial, sans-serif
-        }
-
-        .centered {
-          text-align: center;
+            background-color: black; /* Or use the hex code #000000 */
+            font: serif;
+            color: white;
+            margin: 0;
+            height: 100vh; /* 100% of the viewport height */
+            width: 100vw;  /* 100% of the viewport width */
+            
+            /* 2. Turn the body into a flex container */
+            display: flex;
+            
+            /* 3. Center the text perfectly */
+            justify-content: center; /* Aligns horizontally */
+            align-items: center;     /* Aligns vertically */
+            
+            /* Optional styling */
+            text-align: center;      /* Centers multiple lines of text text itself */
         }
         
       </style>
   </head>
   <body>
-      <h1 class="sans centered">FUNCTION OVER FORM</h1>
-      <p class="sans centered">ORIGINAL<br>ZERO<br>GT GRAPE<br>SOUR APPLE<br>GRAND PRIX GUAVA</p>
+      <h1>FUNCTION OVER FORM</h1>
+      <p>ORIGINAL<br>ZERO<br>GT GRAPE<br>SOUR APPLE<br>GRAND PRIX GUAVA</p>
       <a href="ps1/">
-        <button class="centered">PSX</button>
+        <button>PSX</button>
       </a>
   </body>
 </html>

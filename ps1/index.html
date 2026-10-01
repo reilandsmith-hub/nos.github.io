@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>PlayStation 1 Web</title>
@@ -37,7 +37,7 @@
   #pad-bigger, #pad-smaller { padding:8px 14px; font-weight:bold; }
   #controls-bar { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
 
-  /* Pad transparente superpuesto sobre la pantalla del juego */
+  /* Transparent pad overlaid on the game screen */
   #pad { display:none; position:absolute; inset:0; user-select:none; pointer-events:none; z-index:10; --pad-scale:1; }
   #pad.fullscreen-pad { position:fixed; z-index:2147483647; }
   #pad button { pointer-events:auto; border-radius:50%; border:2px solid #000; background:rgba(255,255,255,0.28); backdrop-filter:blur(1px); color:#000; font-weight:bold; cursor:pointer; transition:width 0.1s, height 0.1s; }
@@ -65,7 +65,7 @@
   #pad .center { position:absolute; bottom:60px; left:50%; transform:translateX(-50%); display:flex; gap:calc(10px * var(--pad-scale)); }
   #pad .center button { position:static; width:calc(70px * var(--pad-scale)); height:calc(30px * var(--pad-scale)); border-radius:15px; font-size:calc(12px * var(--pad-scale)); }
 
-  /* Sticks analógicos virtuales (arrastrables), ocultos hasta que se activan */
+  /* Virtual analog sticks (draggable), hidden until activated */
   #pad .stick-zone { position:absolute; width:calc(90px * var(--pad-scale)); height:calc(90px * var(--pad-scale)); border-radius:50%; border:2px solid rgba(0,0,0,0.6); background:rgba(255,255,255,0.10); display:none; }
   #pad.sticks-on .stick-zone { display:block; }
   #pad .stick-zone.left  { left:calc(160px * var(--pad-scale)); bottom:16px; }
@@ -74,29 +74,29 @@
 </style>
 </head>
 <body>
-  <h2>PlayStation 1 Web (core mednafen_psx_hw vía EmulatorJS)</h2>
+  <h2>PlayStation 1 Web (mednafen_psx_hw core via EmulatorJS)</h2>
 
   <div id="loader">
-    <label>ROM — .bin+.cue multi-track, .iso, .img, .chd, .pbp o .zip (podés seleccionar varios archivos a la vez)
+    <label>ROM — multi-track .bin+.cue, .iso, .img, .chd, .pbp, or .zip (you can select multiple files at once)
       <div class="dropzone" id="rom-drop">
         <input type="file" id="rom" accept=".bin,.cue,.iso,.img,.chd,.pbp,.zip" multiple>
-        <small>Arrastrá acá el .cue + los .bin, o hacé click para elegir</small>
+        <small>Drag the .cue + .bin files here, or click to choose</small>
       </div>
     </label>
-    <label>BIOS de PS1 (ej. scph5501.bin / scph1001.bin / scph7502.bin)
+    <label>PS1 BIOS (e.g. scph5501.bin / scph1001.bin / scph7502.bin)
       <div class="dropzone" id="bios-drop">
         <input type="file" id="bios">
-        <small>Arrastrá acá el archivo de BIOS, o hacé click para elegir</small>
+        <small>Drag the BIOS file here, or click to choose</small>
       </div>
     </label>
     <div id="bios-detected"></div>
     <div id="bios-validate-row">
       <input type="checkbox" id="bios-validate" checked>
-      <label for="bios-validate" style="margin:0;">Validar que el BIOS pese 512KB (recomendado)</label>
+      <label for="bios-validate" style="margin:0;">Validate that the BIOS is 512KB (recommended)</label>
     </div>
-    <button id="load-btn" disabled>Cargar juego</button>
+    <button id="load-btn" disabled>Load Game</button>
     <div id="progress-wrap"><div id="progress-bar"></div></div>
-    <div id="bios-warning">El core necesita un BIOS real de PS1. Es un archivo propiedad de Sony: volcalo vos mismo desde tu propia consola, no lo distribuimos ni linkeamos acá.</div>
+    <div id="bios-warning">The core requires a real PS1 BIOS. It is a Sony-owned file: dump it yourself from your own console; we do not distribute it or link to it here.</div>
   </div>
 
   <div id="status"></div>
@@ -135,27 +135,27 @@
         <button data-key="Enter">Start</button>
       </div>
 
-      <!-- Sticks analógicos virtuales: arrastrar el círculo interior -->
+      <!-- Virtual analog sticks: drag the inner circle -->
       <div class="stick-zone left" id="stick-left"><div class="stick-knob" id="knob-left"></div></div>
       <div class="stick-zone right" id="stick-right"><div class="stick-knob" id="knob-right"></div></div>
     </div>
   </div>
 
   <div id="controls-bar">
-    <button id="toggle-pad">Mostrar controles en pantalla</button>
-    <button id="toggle-sticks">Activar sticks analógicos</button>
-    <button id="toggle-speed">x2 (avance rápido)</button>
-    <button id="pad-smaller">− Botones más chicos</button>
-    <button id="pad-bigger">Botones más grandes +</button>
+    <button id="toggle-pad">Show On-Screen Controls</button>
+    <button id="toggle-sticks">Enable Analog Sticks</button>
+    <button id="toggle-speed">x2 (Fast Forward)</button>
+    <button id="pad-smaller">− Smaller Buttons</button>
+    <button id="pad-bigger">Larger Buttons +</button>
   </div>
 
   <div id="help">
-    <h3>Controles por teclado (default)</h3>
+    <h3>Keyboard Controls (Default)</h3>
     <table>
-      <tr><th>Botón PS1</th><th>Tecla</th></tr>
+      <tr><th>PS1 Button</th><th>Key</th></tr>
       <tr><td>D-pad</td><td>Flechas ↑ ↓ ← →</td></tr>
-      <tr><td>Stick izquierdo</td><td><code>F</code> <code>H</code> <code>T</code> <code>G</code></td></tr>
-      <tr><td>Stick derecho</td><td><code>J</code> <code>L</code> <code>I</code> <code>K</code></td></tr>
+      <tr><td>Left Stick</td><td><code>F</code> <code>H</code> <code>T</code> <code>G</code></td></tr>
+      <tr><td>Right Stick</td><td><code>J</code> <code>L</code> <code>I</code> <code>K</code></td></tr>
       <tr><td>✕ (Cross)</td><td><code>X</code></td></tr>
       <tr><td>○ (Circle)</td><td><code>Z</code></td></tr>
       <tr><td>□ (Square)</td><td><code>S</code></td></tr>
@@ -166,18 +166,18 @@
       <tr><td>R2</td><td><code>R</code></td></tr>
       <tr><td>Start</td><td><code>Enter</code></td></tr>
       <tr><td>Select</td><td><code>V</code></td></tr>
-      <tr><td>Guardado rápido</td><td><code>1</code></td></tr>
-      <tr><td>Carga rápida</td><td><code>2</code></td></tr>
-      <tr><td>Cambiar slot</td><td><code>3</code></td></tr>
-      <tr><td>Avance rápido</td><td><code>+</code> (numpad)</td></tr>
+      <tr><td>Quick Save</td><td><code>1</code></td></tr>
+      <tr><td>Quick Load</td><td><code>2</code></td></tr>
+      <tr><td>Change Slot</td><td><code>3</code></td></tr>
+      <tr><td>Fast Forward</td><td><code>+</code> (numpad)</td></tr>
     </table>
-    <p><b>Multi-track (.cue + varios .bin):</b> seleccioná o arrastrá el <code>.cue</code> junto con todos sus <code>.bin</code> a la vez — se empaquetan solos en un zip en memoria antes de pasarlos al emulador.</p>
-    <p><b>Sticks analógicos:</b> "Activar sticks analógicos" muestra dos círculos arrastrables (izquierdo/derecho). Al soltar, el stick vuelve al centro. Si tu juego pide "modo analógico", activalo desde el menú del emulador (Control Settings) o con el botón ANALOG del propio juego si lo simula por software.</p>
-    <p><b>Memory Card:</b> el menú del emulador (ícono de engranaje) tiene botones para descargar/subir el archivo de guardado (.srm), además del guardado automático en el navegador — así podés llevar tu memory card a otra PC o navegador.</p>
-    <p><b>Cambiar teclas:</b> con el juego cargado, pasá el mouse arriba de la pantalla, abrí el menú del emulador (ícono de engranaje) → <b>Control Settings</b>.</p>
-    <p><b>Controles en pantalla:</b> "Mostrar controles en pantalla" superpone un pad digital transparente sobre la pantalla del juego. Sigue visible en fullscreen.</p>
-    <p><b>Velocidad x2:</b> el botón "x2 (avance rápido)" activa/desactiva el fast-forward con un click.</p>
-    <p><b>Tamaño de los botones:</b> "Botones más grandes +" y "Botones más chicos −" ajustan el pad digital.</p>
+    <p><b>Multi-track (.cue + multiple .bin files):</b> select or drag the <code>.cue</code> together with all of its <code>.bin</code> files at once — they are automatically packed into an in-memory zip before being passed to the emulator.</p>
+    <p><b>Analog sticks:</b> "Enable Analog Sticks" shows two draggable circles (left/right). When released, the stick returns to the center. If your game requires "analog mode," enable it from the emulator menu (Control Settings) or with the game's ANALOG button if it provides one in software.</p>
+    <p><b>Memory Card:</b> the emulator menu (gear icon) has buttons to download/upload the save file (.srm), in addition to automatic saving in the browser — so you can take your memory card to another PC or browser.</p>
+    <p><b>Changing keys:</b> with the game loaded, move the mouse over the screen, open the emulator menu (gear icon) → <b>Control Settings</b>.</p>
+    <p><b>On-Screen Controls:</b> "Show On-Screen Controls" overlays a transparent digital pad on the game screen. It remains visible in fullscreen.</p>
+    <p><b>2x Speed:</b> the "x2 (Fast Forward)" button toggles fast-forward with one click.</p>
+    <p><b>Button Size:</b> "Larger Buttons +" and "− Smaller Buttons" adjust the digital pad.</p>
   </div>
 
 <script>
@@ -188,7 +188,7 @@ const biosDetected = document.getElementById('bios-detected');
 const biosValidateCheckbox = document.getElementById('bios-validate');
 const progressWrap = document.getElementById('progress-wrap');
 
-// Drag & drop sobre las dropzones: reasigna los archivos soltados al input correspondiente
+// Drag & drop on the drop zones: assign dropped files to the corresponding input
 function wireDropzone(zoneId, inputId) {
   const zone = document.getElementById(zoneId);
   const input = document.getElementById(inputId);
@@ -207,32 +207,32 @@ wireDropzone('rom-drop', 'rom');
 wireDropzone('bios-drop', 'bios');
 
 // ============================================================
-// VALIDACIÓN DE BIOS
-// El BIOS real de PS1 pesa siempre 512KB (524288 bytes), sin
-// importar la región (scph1001, scph5501, scph7502, etc).
-// Esto NO confirma que el contenido sea un BIOS válido, solo
-// descarta el error más común: subir el archivo equivocado
-// (una ROM, un save, un BIOS recortado/corrupto, etc).
-// El checkbox "bios-validate" permite DESACTIVAR este chequeo
-// para quien sepa que su archivo es válido aunque no pese
-// exactamente 512KB (por ejemplo dumps con padding distinto).
+// BIOS VALIDATION
+// A real PS1 BIOS is always 512KB (524288 bytes), regardless
+// of region (scph1001, scph5501, scph7502, etc).
+// This does NOT confirm that the contents are a valid BIOS; it only
+// rules out the most common mistake: uploading the wrong file
+// (a ROM, a save, a truncated/corrupted BIOS, etc).
+// The "bios-validate" checkbox lets you DISABLE this check
+// for users who know their file is valid even if it does not weigh
+// exactly 512KB (for example, dumps with different padding).
 // ============================================================
 const EXPECTED_BIOS_SIZE = 524288; // 512KB
 
-// Nombres de archivo conocidos -> etiqueta de región/versión (heurística por nombre, no infalible)
+// Known file names -> region/version label (name-based heuristic, not infallible)
 const BIOS_NAME_HINTS = {
-  'scph1000.bin': 'Japón (v1.0)',
-  'scph1001.bin': 'EE.UU. (v1.1)',
-  'scph1002.bin': 'Europa (v1.1)',
-  'scph5500.bin': 'Japón (v2.0)',
-  'scph5501.bin': 'EE.UU. (v2.1)',
-  'scph5502.bin': 'Europa (v2.1)',
-  'scph7000.bin': 'Japón (v3.0)',
-  'scph7001.bin': 'EE.UU. (v3.0)',
-  'scph7002.bin': 'Europa (v3.0)',
-  'scph7502.bin': 'Europa (v4.1)',
-  'scph9001.bin': 'EE.UU. (v4.1)',
-  'scph9002.bin': 'Europa (v4.3)'
+  'scph1000.bin': 'Japan (v1.0)',
+  'scph1001.bin': 'USA (v1.1)',
+  'scph1002.bin': 'Europe (v1.1)',
+  'scph5500.bin': 'Japan (v2.0)',
+  'scph5501.bin': 'USA (v2.1)',
+  'scph5502.bin': 'Europe (v2.1)',
+  'scph7000.bin': 'Japan (v3.0)',
+  'scph7001.bin': 'USA (v3.0)',
+  'scph7002.bin': 'Europe (v3.0)',
+  'scph7502.bin': 'Europe (v4.1)',
+  'scph9001.bin': 'USA (v4.1)',
+  'scph9002.bin': 'Europe (v4.3)'
 };
 
 function checkReady() {
@@ -250,18 +250,18 @@ biosInput.addEventListener('change', () => {
   const hint = BIOS_NAME_HINTS[nameKey];
   const sizeKB = (f.size / 1024).toFixed(0);
 
-  // VALIDACIÓN DE BIOS: si está tildado el checkbox, se exige 512KB exactos.
-  // Si el usuario lo destilda, se salta el chequeo y se confía en el archivo tal cual.
+  // BIOS VALIDATION: if the checkbox is enabled, exactly 512KB is required.
+  // If the user disables it, the check is skipped and the file is trusted as-is.
   if (biosValidateCheckbox.checked && f.size !== EXPECTED_BIOS_SIZE) {
     biosDetected.style.color = '#f96';
-    biosDetected.textContent = `⚠️ Este archivo pesa ${sizeKB}KB, no 512KB — no parece un BIOS de PS1 válido. Si estás seguro de que lo es, destildá la validación de arriba.`;
+    biosDetected.textContent = `⚠️ This file is ${sizeKB}KB, not 512KB — it does not appear to be a valid PS1 BIOS. If you are sure it is valid, disable the validation above.`;
     return;
   }
 
   biosDetected.style.color = '#9cf';
   biosDetected.textContent = hint
-    ? `BIOS detectado: ${hint} (${sizeKB}KB)`
-    : `Archivo de ${sizeKB}KB — región no reconocida por el nombre, pero puede ser válido igual.`;
+    ? `BIOS detected: ${hint} (${sizeKB}KB)`
+    : `${sizeKB}KB file — region not recognized by the name, but it may still be valid.`;
 });
 
 loadBtn.addEventListener('click', async () => {
@@ -270,17 +270,17 @@ loadBtn.addEventListener('click', async () => {
   if (!romFiles.length || !biosFile) return;
 
   progressWrap.style.display = 'block';
-  document.getElementById('status').textContent = 'Preparando archivos...';
+  document.getElementById('status').textContent = 'Preparing files...';
 
   let romUrl, gameName;
 
   if (romFiles.length === 1) {
-    // Un solo archivo autocontenido (.iso, .chd, .pbp, .zip ya empaquetado, etc.)
+    // A single self-contained file (.iso, .chd, .pbp, already-packed .zip, etc.)
     romUrl = URL.createObjectURL(romFiles[0]);
     gameName = romFiles[0].name;
   } else {
-    // Varios archivos (típico .cue + N .bin): se empaquetan en un zip en memoria
-    // conservando los nombres originales, tal como los espera el .cue.
+    // Multiple files (typically .cue + N .bin): pack them into an in-memory zip
+    // while preserving the original names, as expected by the .cue.
     const zip = new JSZip();
     romFiles.forEach(f => zip.file(f.name, f));
     const zipBlob = await zip.generateAsync({ type: 'blob' });
@@ -289,7 +289,7 @@ loadBtn.addEventListener('click', async () => {
     gameName = (cueFile ? cueFile.name : romFiles[0].name).replace(/\.cue$/i, '.zip');
   }
 
-  document.getElementById('status').textContent = 'Cargando ' + gameName + '...';
+  document.getElementById('status').textContent = 'Loading ' + gameName + '...';
 
   const biosUrl = URL.createObjectURL(biosFile);
   const gameId = 'psx_' + gameName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
@@ -302,7 +302,7 @@ loadBtn.addEventListener('click', async () => {
   window.EJS_gameID = gameId;
   window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
   window.EJS_startOnLoaded = true;
-  // Botones de memory card (descargar/subir .srm) visibles en el menú del emulador
+  // Memory card buttons (download/upload .srm) visible in the emulator menu
   window.EJS_Buttons = { saveSavFiles: true, loadSavFiles: true };
 
   const prev = document.getElementById('ejs-loader');
@@ -314,25 +314,25 @@ loadBtn.addEventListener('click', async () => {
   script.src = window.EJS_pathtodata + 'loader.js';
   script.onload = () => {
     progressWrap.style.display = 'none';
-    document.getElementById('status').textContent = 'Emulador cargado: ' + gameName;
+    document.getElementById('status').textContent = 'Emulator loaded: ' + gameName;
   };
   script.onerror = () => {
     progressWrap.style.display = 'none';
-    document.getElementById('status').textContent = 'Error cargando el emulador. Revisá la conexión a internet.';
+    document.getElementById('status').textContent = 'Error loading the emulator. Check your internet connection.';
   };
   document.body.appendChild(script);
 });
 
-// Botón para mostrar/ocultar el pad digital en pantalla
+// Button to show/hide the on-screen digital pad
 const toggleBtn = document.getElementById('toggle-pad');
 const pad = document.getElementById('pad');
 toggleBtn.addEventListener('click', () => {
   const visible = pad.style.display === 'block';
   pad.style.display = visible ? 'none' : 'block';
-  toggleBtn.textContent = visible ? 'Mostrar controles en pantalla' : 'Ocultar controles en pantalla';
+  toggleBtn.textContent = visible ? 'Show On-Screen Controls' : 'Hide On-Screen Controls';
 });
 
-// Cada botón del pad simula la tecla correspondiente (mismo mapeo default de EmulatorJS)
+// Each pad button simulates the corresponding key (same default EmulatorJS mapping)
 const KEY_CODES = {
   ArrowUp: 38, ArrowDown: 40, ArrowLeft: 37, ArrowRight: 39,
   Enter: 13, z: 90, x: 88, v: 86, q: 81, e: 69, s: 83, a: 65, tab: 9, r: 82,
@@ -361,7 +361,7 @@ document.querySelectorAll('#pad button[data-key]').forEach(btn => {
   btn.addEventListener('touchend', release);
 });
 
-// Botón x2: mantiene "apretada" la tecla de avance rápido (+ del numpad) como toggle
+// x2 button: keeps the fast-forward key (+ on the numpad) held as a toggle
 const speedBtn = document.getElementById('toggle-speed');
 let fastForwardOn = false;
 speedBtn.addEventListener('click', () => {
@@ -377,10 +377,10 @@ speedBtn.addEventListener('click', () => {
   window.dispatchEvent(event);
 
   speedBtn.classList.toggle('active', fastForwardOn);
-  speedBtn.textContent = fastForwardOn ? 'x1 (velocidad normal)' : 'x2 (avance rápido)';
+  speedBtn.textContent = fastForwardOn ? 'x1 (Normal Speed)' : 'x2 (Fast Forward)';
 });
 
-// Botones +/- para agrandar o achicar el pad digital
+// +/- buttons to enlarge or shrink the digital pad
 const PAD_SCALE_MIN = 0.6;
 const PAD_SCALE_MAX = 1.8;
 const PAD_SCALE_STEP = 0.15;
@@ -397,15 +397,15 @@ document.getElementById('pad-smaller').addEventListener('click', () => {
   applyPadScale();
 });
 
-// Botón para mostrar/ocultar los sticks analógicos virtuales
+// Button to show/hide the virtual analog sticks
 const sticksBtn = document.getElementById('toggle-sticks');
 sticksBtn.addEventListener('click', () => {
   const on = pad.classList.toggle('sticks-on');
   sticksBtn.classList.toggle('active', on);
-  sticksBtn.textContent = on ? 'Ocultar sticks analógicos' : 'Activar sticks analógicos';
+  sticksBtn.textContent = on ? 'Hide Analog Sticks' : 'Enable Analog Sticks';
 });
 
-// Sticks arrastrables: convierten la posición del knob en teclas discretas (8 direcciones)
+// Draggable sticks: convert knob position into discrete keys (8 directions)
 function wireStick(zoneId, knobId, keys) {
   // keys = { up, down, left, right }
   const zone = document.getElementById(zoneId);
@@ -458,8 +458,8 @@ function wireStick(zoneId, knobId, keys) {
 wireStick('stick-left',  'knob-left',  { up: 't', down: 'g', left: 'f', right: 'h' });
 wireStick('stick-right', 'knob-right', { up: 'i', down: 'k', left: 'j', right: 'l' });
 
-// El botón de fullscreen de EmulatorJS pone en pantalla completa su propio
-// contenedor, así que el pad queda afuera y no se ve. Lo movemos mientras dure.
+// EmulatorJS fullscreen puts its own container into fullscreen,
+// so the pad ends up outside and is not visible. Move it while fullscreen is active.
 const padOriginalParent = pad.parentElement;
 document.addEventListener('fullscreenchange', () => {
   const fsEl = document.fullscreenElement;

@@ -2,71 +2,71 @@
 
 # 🎮 PlayStation 1 Web Emulator
 
-Emulador de PlayStation 1 (PSX) corriendo 100% en el navegador — core **mednafen_psx_hw** vía [EmulatorJS](https://emulatorjs.org/) (libretro/WASM). Sin instalación, sin backend: cargás tu ROM y tu BIOS y jugás.
+PlayStation 1 (PSX) emulator running 100% in the browser — **mednafen_psx_hw** core via [EmulatorJS](https://emulatorjs.org/) (libretro/WASM). No installation or backend: load your ROM and BIOS and play.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-**[▶️ Abrir demo en vivo](https://lautarosantiago.github.io/psx-web-emulator/)**
+**[▶️ Open live demo](https://lautarosantiago.github.io/psx-web-emulator/)**
 
 </div>
 
 ---
 
-## ⚠️ Sobre el BIOS (importante)
+## ⚠️ About the BIOS (important)
 
-Igual que la Nintendo DS, la PS1 **no tiene BIOS HLE**: el core necesita un dump real del BIOS de una PlayStation física (por ejemplo `scph5501.bin`, `scph1001.bin` o `scph7502.bin`, según región). Es propiedad de Sony, así que:
+Like the Nintendo DS, the PS1 **does not have an HLE BIOS**: the core needs a real BIOS dump from a physical PlayStation (for example `scph5501.bin`, `scph1001.bin`, or `scph7502.bin`, depending on region). It is owned by Sony, so:
 
-- Este repositorio **no lo incluye, no lo genera y no linkea de dónde bajarlo**.
-- Tenés que dumpearlo vos mismo desde tu propia consola.
-- Sin ese archivo el emulador no arranca — el botón "Cargar juego" queda deshabilitado hasta que subas la ROM y el BIOS.
+- This repository **does not include it, generate it, or link to where to download it**.
+- You must dump it yourself from your own console.
+- Without that file the emulator will not start — the "Load Game" button remains disabled until you provide the ROM and BIOS.
 
-## Características
+## Features
 
-- Corre 100% en el cliente, sin backend ni instalación.
-- Carga manual de ROM (`.bin/.cue` multi-track, `.iso`, `.img`, `.chd`, `.pbp`, `.zip`) + BIOS desde el navegador; nunca se suben a ningún lado.
-- **Multi-archivo**: podés seleccionar o arrastrar el `.cue` junto con todos sus `.bin` a la vez — se empaquetan solos en un zip en memoria.
-- **Drag & drop**: arrastrá los archivos directo sobre la zona de carga en vez de usar el selector.
-- **Validación de BIOS** por tamaño (512KB) con detección de región/versión por nombre de archivo, con checkbox para desactivarla si sabés que tu dump es válido igual.
-- Controles por teclado (△ □ ○ ✕, D-pad, L1/R1/L2/R2, Start/Select), remapeables desde el menú del emulador.
-- **Sticks analógicos virtuales** (arrastrables con mouse/touch), activables con un botón, además del D-pad digital.
-- Pad digital transparente superpuesto a la pantalla (mouse/touch), visible también en fullscreen, con botones para agrandar/achicar.
-- Botón x2 para activar/desactivar el avance rápido con un click.
-- Barra de progreso mientras se prepara la carga.
-- Guardado de partida (save states) persistente en el navegador, más botones para descargar/subir la memory card (.srm) desde el menú del emulador.
+- Runs 100% on the client, with no backend or installation.
+- Manually loads ROMs (`.bin/.cue` multi-track, `.iso`, `.img`, `.chd`, `.pbp`, `.zip`) + BIOS from the browser; they are never uploaded anywhere.
+- **Multi-file**: you can select or drag the `.cue` together with all of its `.bin` files at once — they are automatically packed into an in-memory zip.
+- **Drag & drop**: drag files directly onto the loading area instead of using the file picker.
+- **BIOS validation** by size (512KB), with region/version detection by file name and a checkbox to disable validation if you know your dump is valid anyway.
+- Keyboard controls (△ □ ○ ✕, D-pad, L1/R1/L2/R2, Start/Select), remappable from the emulator menu.
+- **Virtual analog sticks** (draggable with mouse/touch), enabled with a button, in addition to the digital D-pad.
+- Transparent digital pad overlaid on the screen (mouse/touch), also visible in fullscreen, with buttons to enlarge/shrink it.
+- x2 button to toggle fast-forward with one click.
+- Progress bar while the files are being prepared.
+- Persistent save states in the browser, plus buttons to download/upload the memory card (.srm) from the emulator menu.
 
 ## Demo
 
 👉 **https://lautarosantiago.github.io/psx-web-emulator/**
 
-![Demo del emulador funcionando](assets/demo.gif)
+![Emulator demo](assets/demo.gif)
 
-> Para que este link funcione hay que activar GitHub Pages en el repo (Settings → Pages → Branch: `main` → carpeta `/root`). Ver instrucciones más abajo.
+> For this link to work, enable GitHub Pages in the repository (Settings → Pages → Branch: `main` → `/root` folder). See the instructions below.
 
-## Uso local
+## Local Usage
 
-1. Cloná el repositorio:
+1. Clone the repository:
    ```bash
    git clone https://github.com/LautaroSantiago/psx-web-emulator.git
    cd psx-web-emulator
    ```
 
-2. Levantá un servidor local (no funciona abriendo el `index.html` directo por `file://`):
+2. Start a local server (opening `index.html` directly via `file://` will not work):
    ```bash
    python3 -m http.server 8000
    ```
 
-3. Abrí `http://localhost:8000`, cargá tu ROM y tu BIOS, y tocá "Cargar juego".
+3. Open `http://localhost:8000`, load your ROM and BIOS, and click "Load Game".
 
-## Controles por defecto
+## Default Controls
 
-| Botón PS1 | Tecla |
+| PS1 Button | Key |
 |---|---|
 | D-pad | Flechas ↑ ↓ ← → |
-| Stick izquierdo | `F` `H` `T` `G` |
-| Stick derecho | `J` `L` `I` `K` |
+| Left Stick | `F` `H` `T` `G` |
+| Right Stick | `J` `L` `I` `K` |
 | ✕ (Cross) | `X` |
 | ○ (Circle) | `Z` |
 | □ (Square) | `S` |
@@ -77,41 +77,41 @@ Igual que la Nintendo DS, la PS1 **no tiene BIOS HLE**: el core necesita un dump
 | R2 | `R` |
 | Start | `Enter` |
 | Select | `V` |
-| Guardado rápido | `1` |
-| Carga rápida | `2` |
-| Cambiar slot | `3` |
+| Quick Save | `1` |
+| Quick Load | `2` |
+| Change Slot | `3` |
 
-Para remapear teclas: menú del emulador (ícono de engranaje) → **Control Settings**. También hay botón **"Mostrar controles en pantalla"**, **"Activar sticks analógicos"** y **"x2"** para avance rápido.
+To remap keys: emulator menu (gear icon) → **Control Settings**. There are also **"Show On-Screen Controls"**, **"Enable Analog Sticks"**, and **"x2"** buttons for fast-forward.
 
-## Problemas comunes
+## Common Problems
 
-- **Pantalla negra al cargar:** normalmente es un BIOS inválido o corrupto. Fijate el aviso de detección de BIOS debajo del selector de archivo, y probá con la validación de tamaño activada.
-- **"Este archivo no parece un BIOS válido":** tu BIOS no pesa exactamente 512KB. Si estás seguro de que es un dump real de PS1 (algunos tienen padding distinto), destildá "Validar que el BIOS pese 512KB".
-- **Audio cortado o con clicks:** común en emuladores web bajo carga alta de CPU — probá cerrar otras pestañas o bajar la resolución interna desde el menú del emulador (Video Settings).
-- **El juego pide "modo analógico" y no reacciona:** activá los sticks virtuales con el botón correspondiente, o mapeá el modo analógico desde Control Settings si el juego lo requiere como botón explícito (el "ANALOG" físico del control no está mapeado por defecto).
-- **Multi-track no carga bien:** confirmá que elegiste el `.cue` Y todos sus `.bin` juntos en la misma selección — si falta alguno, el `.cue` va a apuntar a un archivo que no está en el zip.
+- **Black screen when loading:** this is usually caused by an invalid or corrupted BIOS. Check the BIOS detection message below the file selector and try with size validation enabled.
+- **"This file does not appear to be a valid BIOS":** your BIOS is not exactly 512KB. If you are sure it is a real PS1 dump (some have different padding), disable "Validate that the BIOS is 512KB".
+- **Choppy audio or clicks:** common in web emulators under high CPU load — try closing other tabs or lowering the internal resolution from the emulator menu (Video Settings).
+- **The game asks for "analog mode" and does not respond:** enable the virtual sticks with the corresponding button, or map analog mode from Control Settings if the game requires it as an explicit button (the physical "ANALOG" controller button is not mapped by default).
+- **Multi-track does not load correctly:** make sure you selected the `.cue` AND all of its `.bin` files together in the same selection — if any are missing, the `.cue` will point to a file that is not in the zip.
 
-## Activar el demo con GitHub Pages
+## Enable the Demo with GitHub Pages
 
 ```bash
-# en la raíz del repo, después de pushear a main
+# from the repository root, after pushing to main
 git checkout -b gh-pages
 git push -u origin gh-pages
 ```
 
-O desde GitHub: **Settings → Pages → Source: branch `main`, carpeta `/ (root)` → Save**. El link queda disponible en unos minutos en `https://lautarosantiago.github.io/psx-web-emulator/`.
+Or from GitHub: **Settings → Pages → Source: branch `main`, folder `/ (root)` → Save**. The link will become available within a few minutes at `https://lautarosantiago.github.io/psx-web-emulator/`.
 
-## Nota sobre ROMs
+## ROM Note
 
-Este repositorio **no incluye ni distribuye ROMs ni archivos de BIOS**. Solo funciona con archivos que el usuario ya posee legalmente. El `.gitignore` excluye las carpetas `roms/` y `bios/` y las extensiones típicas para evitar subirlas por error.
+This repository **does not include or distribute ROMs or BIOS files**. It only works with files the user already legally owns. The `.gitignore` excludes the `roms/` and `bios/` folders and common file extensions to prevent accidental uploads.
 
-## Tecnología
+## Technology
 
 - [EmulatorJS](https://emulatorjs.org/) — frontend web para RetroArch (core `mednafen_psx_hw`).
-- [JSZip](https://stuk.github.io/jszip/) — empaqueta en memoria los archivos `.cue`+`.bin` multi-track antes de pasarlos al emulador.
-- HTML / CSS / JavaScript vanilla, sin dependencias de build.
+- [JSZip](https://stuk.github.io/jszip/) — packs multi-track `.cue`+`.bin` files in memory before passing them to the emulator.
+- Vanilla HTML / CSS / JavaScript, with no build dependencies.
 
-## Autor
+## Author
 
 <div align="left">
 
@@ -120,6 +120,6 @@ Este repositorio **no incluye ni distribuye ROMs ni archivos de BIOS**. Solo fun
 
 </div>
 
-## Licencia
+## License
 
-MIT — ver [LICENSE](LICENSE). No aplica a EmulatorJS ni a los cores de terceros que se cargan desde su CDN, ni a ninguna ROM o BIOS que el usuario utilice.
+MIT — see [LICENSE](LICENSE). It does not apply to EmulatorJS or third-party cores loaded from its CDN, nor to any ROM or BIOS used by the user.

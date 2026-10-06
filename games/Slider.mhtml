@@ -1,0 +1,979 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://turtlekiosk.github.io/slider/
+Subject: Slider
+Date: Tue, 6 Oct 2026 08:51:47 -0400
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--xPcp8rXAg3QIuveKedqWP4LaLxSc2xt3nqydYZYzaY----"
+
+
+------MultipartBoundary--xPcp8rXAg3QIuveKedqWP4LaLxSc2xt3nqydYZYzaY----
+Content-Type: text/html
+Content-ID: <frame-FF5A22C2AE5227353F1453E3963172A4@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://turtlekiosk.github.io/slider/
+
+<!DOCTYPE html><html lang=3D"en" style=3D""><head><meta http-equiv=3D"Conte=
+nt-Type" content=3D"text/html; charset=3DUTF-8"><meta content=3D"width=3Dde=
+vice-width,initial-scale=3D1,user-scalable=3Dno,viewport-fit=3Dcover" name=
+=3D"viewport"><meta content=3D"#000000" name=3D"theme-color"><meta content=
+=3D"dark" name=3D"color-scheme"><meta content=3D"yes" name=3D"apple-mobile-=
+web-app-capable"><meta content=3D"black-translucent" name=3D"apple-mobile-w=
+eb-app-status-bar-style"><meta content=3D"Slider" name=3D"apple-mobile-web-=
+app-title"><meta content=3D"yes" name=3D"mobile-web-app-capable"><link href=
+=3D"https://turtlekiosk.github.io/slider/manifest.webmanifest" rel=3D"manif=
+est"><link href=3D"https://turtlekiosk.github.io/slider/icon-192.png" rel=
+=3D"icon" type=3D"image/png" sizes=3D"192x192"><link href=3D"https://turtle=
+kiosk.github.io/slider/icon-192.png" rel=3D"apple-touch-icon"><link href=3D=
+"https://turtlekiosk.github.io/slider/fonts/work-sans-400.woff2" rel=3D"pre=
+load" type=3D"font/woff2" as=3D"font" crossorigin=3D""><link href=3D"https:=
+//turtlekiosk.github.io/slider/fonts/fragment-mono-400.woff2" rel=3D"preloa=
+d" type=3D"font/woff2" as=3D"font" crossorigin=3D""><link href=3D"https://t=
+urtlekiosk.github.io/slider/shell.css" rel=3D"stylesheet"><title>Slider</ti=
+tle></head><body><div id=3D"container"><canvas id=3D"canvas" tabindex=3D"-1=
+" width=3D"1366" height=3D"599" style=3D"cursor: default;"></canvas><canvas=
+ id=3D"postfx-overlay" aria-hidden=3D"true" style=3D"display: none;"></canv=
+as></div><div id=3D"status" style=3D"display:none">Running...</div><div id=
+=3D"progress" style=3D"width: 0%;"></div><div id=3D"loading-overlay" aria-h=
+idden=3D"true"><svg viewBox=3D"0 0 24 24" aria-hidden=3D"true" height=3D"56=
+" width=3D"56" xmlns=3D"http://www.w3.org/2000/svg"><circle cx=3D"12" cy=3D=
+"12" r=3D"0" fill=3D"currentColor"><animate attributeName=3D"r" begin=3D"0;=
+SVGftllRbIv.begin+0.6s" dur=3D"1.2s" fill=3D"freeze" values=3D"0;11" id=3D"=
+SVG0cdVlcnN" calcMode=3D"spline" keySplines=3D".52,.6,.25,.99"></animate><a=
+nimate attributeName=3D"opacity" begin=3D"0;SVGftllRbIv.begin+0.6s" dur=3D"=
+1.2s" fill=3D"freeze" values=3D"1;0" calcMode=3D"spline" keySplines=3D".52,=
+.6,.25,.99"></animate></circle><circle cx=3D"12" cy=3D"12" r=3D"0" fill=3D"=
+currentColor"><animate attributeName=3D"r" begin=3D"SVG0cdVlcnN.begin+0.6s"=
+ dur=3D"1.2s" fill=3D"freeze" values=3D"0;11" id=3D"SVGftllRbIv" calcMode=
+=3D"spline" keySplines=3D".52,.6,.25,.99"></animate><animate attributeName=
+=3D"opacity" begin=3D"SVG0cdVlcnN.begin+0.6s" dur=3D"1.2s" fill=3D"freeze" =
+values=3D"1;0" calcMode=3D"spline" keySplines=3D".52,.6,.25,.99"></animate>=
+</circle></svg></div><div id=3D"touch-controls" aria-hidden=3D"false" class=
+=3D"visible layout-b style-simplified" style=3D"--tc-bg-alpha: 0.250; --tc-=
+bg-pressed-alpha: 0.520; --tc-stroke-alpha: 0.470; --tc-label-alpha: 0.350;=
+ --tc-label-rgb: 255, 255, 255;"><div id=3D"tc-stick-zone" style=3D"touch-a=
+ction: none;"><div id=3D"tc-stick-hint" aria-hidden=3D"true"><svg viewBox=
+=3D"0 0 100 100"><circle cx=3D"50" cy=3D"50" r=3D"46" class=3D"hint-bg"></c=
+ircle><circle cx=3D"50" cy=3D"50" r=3D"20" class=3D"hint-knob"></circle></s=
+vg></div></div><div id=3D"tc-cstick-zone"><div id=3D"tc-cstick-hint" aria-h=
+idden=3D"true"><svg viewBox=3D"0 0 100 100"><circle cx=3D"50" cy=3D"50" r=
+=3D"46" class=3D"hint-bg"></circle><circle cx=3D"50" cy=3D"50" r=3D"20" cla=
+ss=3D"hint-knob"></circle><text class=3D"tc-label" x=3D"50" y=3D"50">C</tex=
+t></svg></div></div><div class=3D"tc-button" id=3D"tc-dpad" aria-label=3D"D=
+-pad" data-tc-dpad=3D"1"><svg viewBox=3D"0 0 100 100"><path d=3D"M36 4 H64 =
+V36 H96 V64 H64 V96 H36 V64 H4 V36 H36 Z" class=3D"tc-bg"></path></svg></di=
+v><div id=3D"tc-dpad-cluster"><div class=3D"tc-button" id=3D"tc-dpad-up" ar=
+ia-label=3D"Up" data-tc-button=3D"0x0008"><svg viewBox=3D"0 0 100 100"><cir=
+cle cx=3D"50" cy=3D"50" r=3D"46" class=3D"tc-bg"></circle><polygon class=3D=
+"tc-arrow" points=3D"50,43 60,57 40,57"></polygon></svg></div><div class=3D=
+"tc-button" id=3D"tc-dpad-down" aria-label=3D"Down" data-tc-button=3D"0x000=
+4"><svg viewBox=3D"0 0 100 100"><circle cx=3D"50" cy=3D"50" r=3D"46" class=
+=3D"tc-bg"></circle><polygon class=3D"tc-arrow" points=3D"50,57 40,43 60,43=
+"></polygon></svg></div><div class=3D"tc-button" id=3D"tc-dpad-left" aria-l=
+abel=3D"Left" data-tc-button=3D"0x0001"><svg viewBox=3D"0 0 100 100"><circl=
+e cx=3D"50" cy=3D"50" r=3D"46" class=3D"tc-bg"></circle><polygon class=3D"t=
+c-arrow" points=3D"43,50 57,40 57,60"></polygon></svg></div><div class=3D"t=
+c-button" id=3D"tc-dpad-right" aria-label=3D"Right" data-tc-button=3D"0x000=
+2"><svg viewBox=3D"0 0 100 100"><circle cx=3D"50" cy=3D"50" r=3D"46" class=
+=3D"tc-bg"></circle><polygon class=3D"tc-arrow" points=3D"57,50 43,40 43,60=
+"></polygon></svg></div></div><div id=3D"tc-face-cluster"><div class=3D"tc-=
+button" id=3D"tc-a" aria-label=3D"A" data-tc-button=3D"0x0100"><svg viewBox=
+=3D"0 0 100 100"><circle cx=3D"50" cy=3D"50" r=3D"46" class=3D"tc-bg"></cir=
+cle><text class=3D"tc-label" x=3D"50" y=3D"52">A</text></svg></div><div cla=
+ss=3D"tc-button" id=3D"tc-b" aria-label=3D"B" data-tc-button=3D"0x0200"><sv=
+g viewBox=3D"0 0 100 100"><circle cx=3D"50" cy=3D"50" r=3D"46" class=3D"tc-=
+bg"></circle><text class=3D"tc-label" x=3D"50" y=3D"52">B</text></svg></div=
+><div class=3D"tc-button" id=3D"tc-y" aria-label=3D"Y" data-tc-button=3D"0x=
+0800"><svg viewBox=3D"0 0 100 100"><circle cx=3D"50" cy=3D"50" r=3D"46" cla=
+ss=3D"tc-bg"></circle><text class=3D"tc-label" x=3D"50" y=3D"52">Y</text></=
+svg></div><div class=3D"tc-button" id=3D"tc-x" aria-label=3D"X" data-tc-but=
+ton=3D"0x0400"><svg viewBox=3D"0 0 100 100"><circle cx=3D"50" cy=3D"50" r=
+=3D"46" class=3D"tc-bg"></circle><text class=3D"tc-label" x=3D"50" y=3D"52"=
+>X</text></svg></div></div><div id=3D"tc-shoulder-row"><div class=3D"tc-but=
+ton" id=3D"tc-l" aria-label=3D"L" data-tc-button=3D"0x0040"><svg viewBox=3D=
+"0 0 100 50"><rect height=3D"46" width=3D"96" x=3D"2" y=3D"2" class=3D"tc-b=
+g" rx=3D"14"></rect><text class=3D"tc-label" x=3D"50" y=3D"27">L</text></sv=
+g></div><div class=3D"tc-button" id=3D"tc-start" aria-label=3D"Start" data-=
+tc-button=3D"0x1000"><svg viewBox=3D"0 0 100 50"><rect height=3D"46" width=
+=3D"96" x=3D"2" y=3D"2" class=3D"tc-bg" rx=3D"14"></rect><text class=3D"tc-=
+label" x=3D"50" y=3D"27">START</text></svg></div><div class=3D"tc-button" i=
+d=3D"tc-z" aria-label=3D"Z" data-tc-button=3D"0x0010"><svg viewBox=3D"0 0 1=
+00 50"><rect height=3D"46" width=3D"96" x=3D"2" y=3D"2" class=3D"tc-bg" rx=
+=3D"14"></rect><text class=3D"tc-label" x=3D"50" y=3D"27">Z</text></svg></d=
+iv><div class=3D"tc-button" id=3D"tc-r" aria-label=3D"R" data-tc-button=3D"=
+0x0020"><svg viewBox=3D"0 0 100 50"><rect height=3D"46" width=3D"96" x=3D"2=
+" y=3D"2" class=3D"tc-bg" rx=3D"14"></rect><text class=3D"tc-label" x=3D"50=
+" y=3D"27">R</text></svg></div></div></div><div id=3D"rom-picker" aria-hidd=
+en=3D"false" class=3D"visible"><h1>Slider =E2=80=93 A Web Port of Animal Cr=
+ossing (GameCube)</h1><div id=3D"webkit-warning" style=3D"display:none" rol=
+e=3D"alert"><strong>Warning:</strong> Safari and <b>all</b> iOS browsers ha=
+ve a known memory leak (<a href=3D"https://bugs.webkit.org/show_bug.cgi?id=
+=3D304810" rel=3D"noopener" target=3D"_blank">WebKit bug 304810</a>) that c=
+auses this application's memory usage to climb until the page crashes after=
+ about a minute. For a stable session try a Chrome, Edge, or any other Chro=
+mium-based browser on a desktop OS or Chrome on Android.</div><ol id=3D"rom=
+-instructions"><li>Although this is a port and not an emulator, no assets a=
+re distributed here. A disc image file of AC is still necessary to play the=
+ game for this reason.</li><li>Thank you to <a href=3D"https://github.com/A=
+CreTeam/ac-decomp">ACreTeam</a> and <a href=3D"https://github.com/flyngmt/A=
+CGC-PC-Port">flyngmt</a> for their work on the decomp and PC port of ACGC, =
+on which this project is built on top of.</li><li>This software is provided=
+ as-is, without warranty of any kind. There's no guarantee it won't corrupt=
+ your save data at some point, so export your save data as often as necessa=
+ry. I have not playtested the entire game, at this stage there are very lik=
+ely to be places where the game crashes before you have an opportunity to s=
+ave.</li><li id=3D"rom-install-item">This page is a PWA (Progressive Web Ap=
+p) which means you can save it locally on your device for an app-like exper=
+ience with offline support. <button id=3D"rom-install-btn" type=3D"button" =
+style=3D"display:none">Install</button><span id=3D"rom-install-hint" style=
+=3D"display:none">Tap your browser's <em>Share</em> menu and choose <strong=
+>Add to Home Screen</strong>, </span><span id=3D"rom-install-fallback">Open=
+ your browser's menu and press Install / Add to Home Screen.</span></li></o=
+l><label for=3D"rom-file" id=3D"rom-drop" style=3D"display: flex;"><div cla=
+ss=3D"primary">Drag a USA (GAFE01 Rev 0) disc image here, or click to selec=
+t</div><div class=3D"secondary">.iso =C2=B7 .gcm =C2=B7 .ciso =E2=80=94 sta=
+ys on your device</div><input id=3D"rom-file" type=3D"file" accept=3D".iso,=
+.gcm,.ciso"></label><div id=3D"rom-runtime-status" class=3D"ok">Runtime rea=
+dy.</div><div id=3D"rom-status" class=3D"">No ROM imported. Drop one above =
+to begin.</div><div id=3D"rom-saves"><div class=3D"rom-saves-heading">Memor=
+y card slots (optional)</div><div class=3D"rom-saves-help">Import an existi=
+ng .gci save before booting. Ignore to start a fresh save.</div><div class=
+=3D"rom-saves-grid"><div class=3D"rom-saves-slot" data-slot=3D"a"><div clas=
+s=3D"rom-saves-slot-label">Slot A</div><div class=3D"checking rom-saves-slo=
+t-state">Empty</div><div class=3D"rom-saves-slot-actions"><button id=3D"rom=
+-import-a" type=3D"button" style=3D"" class=3D"rom-saves-btn">Import=E2=80=
+=A6</button> <button id=3D"rom-export-a" type=3D"button" style=3D"display:n=
+one" class=3D"rom-saves-btn">Export</button> <button id=3D"rom-remove-a" ty=
+pe=3D"button" style=3D"" class=3D"rom-saves-btn rom-saves-btn-secondary" di=
+sabled=3D"">Delete</button></div></div><div class=3D"rom-saves-slot" data-s=
+lot=3D"b"><div class=3D"rom-saves-slot-label">Slot B</div><div class=3D"che=
+cking rom-saves-slot-state">Empty</div><div class=3D"rom-saves-slot-actions=
+"><button id=3D"rom-import-b" type=3D"button" style=3D"" class=3D"rom-saves=
+-btn">Import=E2=80=A6</button> <button id=3D"rom-export-b" type=3D"button" =
+style=3D"display:none" class=3D"rom-saves-btn">Export</button> <button id=
+=3D"rom-remove-b" type=3D"button" style=3D"" class=3D"rom-saves-btn rom-sav=
+es-btn-secondary" disabled=3D"">Delete</button></div></div></div><div class=
+=3D"rom-saves-status" id=3D"rom-saves-status"></div><input id=3D"rom-saves-=
+file" type=3D"file" accept=3D".gci" style=3D"display:none"></div><button id=
+=3D"rom-start" type=3D"button" disabled=3D"">Start</button></div><button id=
+=3D"tc-style-swap" type=3D"button" aria-label=3D"Toggle touch controls" tit=
+le=3D"Switch to full touch controls" style=3D"display: none;"><svg viewBox=
+=3D"0 0 24 24" aria-hidden=3D"true" height=3D"20" width=3D"20" xmlns=3D"htt=
+p://www.w3.org/2000/svg"><path d=3D"M11.146 15.854a1.207 1.207 0 0 1 1.708 =
+0l1.56 1.56A2 2 0 0 1 15 18.828V21a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2.172a2 =
+2 0 0 1 .586-1.414zM18.828 15a2 2 0 0 1-1.414-.586l-1.56-1.56a1.207 1.207 0=
+ 0 1 0-1.708l1.56-1.56A2 2 0 0 1 18.828 9H21a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z=
+m-12.242-.586A2 2 0 0 1 5.172 15H3a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2.172a2 2=
+ 0 0 1 1.414.586l1.56 1.56a1.207 1.207 0 0 1 0 1.708zM9 3a1 1 0 0 1 1-1h4a1=
+ 1 0 0 1 1 1v2.172a2 2 0 0 1-.586 1.414l-1.56 1.56a1.207 1.207 0 0 1-1.708 =
+0l-1.56-1.56A2 2 0 0 1 9 5.172z" fill=3D"none" stroke=3D"currentColor" stro=
+ke-linecap=3D"round" stroke-linejoin=3D"round" stroke-width=3D"2"></path></=
+svg></button> <button id=3D"audio-toggle" type=3D"button" aria-label=3D"Tog=
+gle audio" title=3D"Mute / unmute audio" style=3D"display: none;"><svg view=
+Box=3D"0 0 24 24" aria-hidden=3D"true" height=3D"20" width=3D"20" xmlns=3D"=
+http://www.w3.org/2000/svg" class=3D"audio-icon-on"><path d=3D"M11 4.702a.7=
+05.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6=
+a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 1=
+9.298zM16 9a5 5 0 0 1 0 6m3.364 3.364a9 9 0 0 0 0-12.728" fill=3D"none" str=
+oke=3D"currentColor" stroke-linecap=3D"round" stroke-linejoin=3D"round" str=
+oke-width=3D"2"></path></svg><svg viewBox=3D"0 0 24 24" aria-hidden=3D"true=
+" height=3D"20" width=3D"20" xmlns=3D"http://www.w3.org/2000/svg" class=3D"=
+audio-icon-off"><path d=3D"M16 9a5 5 0 0 1 .95 2.293m2.414-5.657a9 9 0 0 1 =
+1.889 9.96M2 2l20 20M7 7l-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a=
+1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19=
+.298V11M9.828 4.172A.686.686 0 0 1 11 4.657v.686" fill=3D"none" stroke=3D"c=
+urrentColor" stroke-linecap=3D"round" stroke-linejoin=3D"round" stroke-widt=
+h=3D"2"></path></svg></button> <button id=3D"fullscreen-toggle" type=3D"but=
+ton" aria-label=3D"Enter fullscreen" title=3D"Fullscreen" style=3D"display:=
+ none;"><svg viewBox=3D"0 0 24 24" aria-hidden=3D"true" height=3D"20" width=
+=3D"20" xmlns=3D"http://www.w3.org/2000/svg" class=3D"fs-icon-expand"><path=
+ d=3D"m15 15l6 6M15 9l6-6m0 13v5h-5m5-13V3h-5M3 16v5h5m-5 0l6-6M3 8V3h5m1 6=
+L3 3" fill=3D"none" stroke=3D"currentColor" stroke-linecap=3D"round" stroke=
+-linejoin=3D"round" stroke-width=3D"2"></path></svg><svg viewBox=3D"0 0 24 =
+24" aria-hidden=3D"true" height=3D"20" width=3D"20" xmlns=3D"http://www.w3.=
+org/2000/svg" class=3D"fs-icon-collapse"><path d=3D"m15 15l6 6m-6-6v4.8m0-4=
+.8h4.8M9 19.8V15m0 0H4.2M9 15l-6 6M15 4.2V9m0 0h4.8M15 9l6-6M9 4.2V9m0 0H4.=
+2M9 9L3 3" fill=3D"none" stroke=3D"currentColor" stroke-linecap=3D"round" s=
+troke-linejoin=3D"round" stroke-width=3D"2"></path></svg></button> <button =
+id=3D"settings-gear" type=3D"button" aria-label=3D"Settings" title=3D"Open =
+settings" style=3D"display: none;"><svg viewBox=3D"0 0 24 24" aria-hidden=
+=3D"true" height=3D"20" width=3D"20" xmlns=3D"http://www.w3.org/2000/svg"><=
+g fill=3D"none" stroke=3D"currentColor" stroke-linecap=3D"round" stroke-lin=
+ejoin=3D"round" stroke-width=3D"2"><path d=3D"M9.671 4.136a2.34 2.34 0 0 1 =
+4.659 0a2.34 2.34 0 0 0 3.319 1.915a2.34 2.34 0 0 1 2.33 4.033a2.34 2.34 0 =
+0 0 0 3.831a2.34 2.34 0 0 1-2.33 4.033a2.34 2.34 0 0 0-3.319 1.915a2.34 2.3=
+4 0 0 1-4.659 0a2.34 2.34 0 0 0-3.32-1.915a2.34 2.34 0 0 1-2.33-4.033a2.34 =
+2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915">=
+</path><circle cx=3D"12" cy=3D"12" r=3D"3"></circle></g></svg></button><dia=
+log aria-labelledby=3D"settings-title" id=3D"settings-menu"><div class=3D"m=
+enu-body"><h2 id=3D"settings-title">Settings</h2><h3>Saves</h3><div class=
+=3D"rom-saves-grid" id=3D"settings-saves"><div class=3D"rom-saves-slot" dat=
+a-slot=3D"a"><div class=3D"rom-saves-slot-label">Slot A</div><div class=3D"=
+checking rom-saves-slot-state"><svg viewBox=3D"0 0 24 24" aria-hidden=3D"tr=
+ue" height=3D"14" width=3D"14" xmlns=3D"http://www.w3.org/2000/svg" class=
+=3D"status-spinner"><rect height=3D"14" width=3D"6" x=3D"1" y=3D"4" fill=3D=
+"currentColor"><animate attributeName=3D"opacity" begin=3D"0;SVGslota89dAd4=
+w.end-0.25s" dur=3D"0.75s" fill=3D"freeze" values=3D"1;.2" id=3D"SVGslot9ov=
+aHbIP"></animate></rect><rect height=3D"14" width=3D"6" x=3D"9" y=3D"4" fil=
+l=3D"currentColor" opacity=3D".4"><animate attributeName=3D"opacity" begin=
+=3D"SVGslot9ovaHbIP.begin+0.15s" dur=3D"0.75s" fill=3D"freeze" values=3D"1;=
+.2"></animate></rect><rect height=3D"14" width=3D"6" x=3D"17" y=3D"4" fill=
+=3D"currentColor" opacity=3D".3"><animate attributeName=3D"opacity" begin=
+=3D"SVGslot9ovaHbIP.begin+0.3s" dur=3D"0.75s" fill=3D"freeze" values=3D"1;.=
+2" id=3D"SVGslota89dAd4w"></animate></rect></svg><span>Checking=E2=80=A6</s=
+pan></div><div class=3D"rom-saves-slot-actions"><button id=3D"settings-impo=
+rt-a" type=3D"button" style=3D"display:none" class=3D"rom-saves-btn">Import=
+=E2=80=A6</button> <button id=3D"settings-export-a" type=3D"button" style=
+=3D"display:none" class=3D"rom-saves-btn">Export</button> <button id=3D"set=
+tings-remove-a" type=3D"button" style=3D"display:none" class=3D"rom-saves-b=
+tn rom-saves-btn-secondary">Delete</button></div></div><div class=3D"rom-sa=
+ves-slot" data-slot=3D"b"><div class=3D"rom-saves-slot-label">Slot B</div><=
+div class=3D"checking rom-saves-slot-state"><svg viewBox=3D"0 0 24 24" aria=
+-hidden=3D"true" height=3D"14" width=3D"14" xmlns=3D"http://www.w3.org/2000=
+/svg" class=3D"status-spinner"><rect height=3D"14" width=3D"6" x=3D"1" y=3D=
+"4" fill=3D"currentColor"><animate attributeName=3D"opacity" begin=3D"0;SVG=
+slota89dAd4w.end-0.25s" dur=3D"0.75s" fill=3D"freeze" values=3D"1;.2" id=3D=
+"SVGslot9ovaHbIP"></animate></rect><rect height=3D"14" width=3D"6" x=3D"9" =
+y=3D"4" fill=3D"currentColor" opacity=3D".4"><animate attributeName=3D"opac=
+ity" begin=3D"SVGslot9ovaHbIP.begin+0.15s" dur=3D"0.75s" fill=3D"freeze" va=
+lues=3D"1;.2"></animate></rect><rect height=3D"14" width=3D"6" x=3D"17" y=
+=3D"4" fill=3D"currentColor" opacity=3D".3"><animate attributeName=3D"opaci=
+ty" begin=3D"SVGslot9ovaHbIP.begin+0.3s" dur=3D"0.75s" fill=3D"freeze" valu=
+es=3D"1;.2" id=3D"SVGslota89dAd4w"></animate></rect></svg><span>Checking=E2=
+=80=A6</span></div><div class=3D"rom-saves-slot-actions"><button id=3D"sett=
+ings-import-b" type=3D"button" style=3D"display:none" class=3D"rom-saves-bt=
+n">Import=E2=80=A6</button> <button id=3D"settings-export-b" type=3D"button=
+" style=3D"display:none" class=3D"rom-saves-btn">Export</button> <button id=
+=3D"settings-remove-b" type=3D"button" style=3D"display:none" class=3D"rom-=
+saves-btn rom-saves-btn-secondary">Delete</button></div></div></div><div cl=
+ass=3D"rom-saves-status" id=3D"save-status"></div><input id=3D"import-file"=
+ type=3D"file" accept=3D".gci" style=3D"display:none"><div id=3D"settings-i=
+nstall-section" style=3D"display:none"><h3>Install</h3><p class=3D"settings=
+-install-help">Save this game to your device for an app-like experience wit=
+h offline support.</p><button id=3D"settings-install-btn" type=3D"button">I=
+nstall app</button></div><h3>Touch Controls</h3><div class=3D"row"><label f=
+or=3D"tc-opacity-range">Opacity</label> <input id=3D"tc-opacity-range" type=
+=3D"range" max=3D"80" min=3D"10" step=3D"5"> <span id=3D"tc-opacity-value" =
+style=3D"opacity:.7;font-variant-numeric:tabular-nums;min-width:3em;text-al=
+ign:right">25%</span></div><h3>Display</h3><div class=3D"row"><label for=3D=
+"postfx-mode-select">Filter</label> <select id=3D"postfx-mode-select"><opti=
+on value=3D"off">Off</option><option value=3D"crt-basic">CRT Basic</option>=
+<option value=3D"crt-full">CRT Full</option><option value=3D"lcd">LCD</opti=
+on><option value=3D"cmyk-halftone">CMYK Halftone</option><option value=3D"a=
+scii">ASCII</option></select></div><h3>Control Assignments</h3><table class=
+=3D"controls"><thead><tr><th>GameCube</th><th>Keyboard</th><th>Gamepad</th>=
+</tr></thead><tbody id=3D"controls-body"><tr><td>A</td><td>Space</td><td>A =
+(face)</td></tr><tr><td>B</td><td>Left Shift</td><td>B (face)</td></tr><tr>=
+<td>X</td><td>X</td><td>X (face)</td></tr><tr><td>Y</td><td>Y</td><td>Y (fa=
+ce)</td></tr><tr><td>Start</td><td>Enter</td><td>Start / Back</td></tr><tr>=
+<td>Z</td><td>Z</td><td>R Shoulder / R Trigger</td></tr><tr><td>L</td><td>Q=
+</td><td>L Trigger</td></tr><tr><td>R</td><td>E</td><td>R Trigger</td></tr>=
+<tr><td>Main Stick</td><td>W A S D</td><td>Left Stick</td></tr><tr><td>C-St=
+ick</td><td>Arrow keys</td><td>Right Stick</td></tr><tr><td>D-Pad</td><td>I=
+ J K L</td><td>D-Pad</td></tr></tbody></table></div><div class=3D"menu-foot=
+er"><span id=3D"build-tag" title=3D"Build identifier">cfecc8d4019c</span> <=
+button id=3D"btn-close-menu" type=3D"button">Close</button></div></dialog><=
+/body></html>
+------MultipartBoundary--xPcp8rXAg3QIuveKedqWP4LaLxSc2xt3nqydYZYzaY----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://turtlekiosk.github.io/slider/shell.css
+
+@charset "utf-8";
+
+@font-face { font-family: "Work Sans"; font-style: normal; font-weight: 400=
+; font-display: swap; src: url("fonts/work-sans-400.woff2") format("woff2")=
+; }
+
+@font-face { font-family: "Work Sans"; font-style: normal; font-weight: 500=
+; font-display: swap; src: url("fonts/work-sans-500.woff2") format("woff2")=
+; }
+
+@font-face { font-family: "Work Sans"; font-style: normal; font-weight: 600=
+; font-display: swap; src: url("fonts/work-sans-600.woff2") format("woff2")=
+; }
+
+@font-face { font-family: "Fragment Mono"; font-style: normal; font-weight:=
+ 400; font-display: swap; src: url("fonts/fragment-mono-400.woff2") format(=
+"woff2"); }
+
+@keyframes _refresh-keepalive {=20
+  0%, 100% { opacity: 0.001; }
+  50% { opacity: 0.002; }
+}
+
+body::after { content: ""; position: fixed; top: 0px; left: 0px; width: 1px=
+; height: 1px; pointer-events: none; background: rgb(255, 255, 255); animat=
+ion: 1s linear 0s infinite normal none running _refresh-keepalive; will-cha=
+nge: opacity; }
+
+:root { --status-err: #f88; --status-ok: #6c0; }
+
+html, body { margin: 0px; padding: 0px; background: rgb(0, 0, 0); color: rg=
+b(221, 221, 221); font-family: "Work Sans", -apple-system, BlinkMacSystemFo=
+nt, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; height: 100dvh=
+; width: 100dvw; overflow: hidden; }
+
+#container { display: flex; flex-direction: column; align-items: center; ju=
+stify-content: center; height: 100%; width: 100%; }
+
+body.tc-bias-top #container { padding-top: calc(48px + env(safe-area-inset-=
+top)); padding-bottom: 50dvh; box-sizing: border-box; }
+
+#canvas { display: block; background: rgb(0, 0, 0); outline: none; image-re=
+ndering: pixelated; width: 100%; height: 100%; }
+
+#postfx-overlay { position: fixed; display: none; pointer-events: none; ima=
+ge-rendering: pixelated; z-index: 2; }
+
+@media (max-aspect-ratio: 4 / 3) {
+  #canvas { width: 100vw; height: calc(75vw); }
+}
+
+#status { position: fixed; top: 8px; left: 8px; font-size: 12px; opacity: 0=
+.7; pointer-events: none; }
+
+#build-tag { font-family: "Fragment Mono", ui-monospace, "SF Mono", Menlo, =
+Consolas, monospace; font-size: 11px; opacity: 0.45; user-select: text; }
+
+#progress { position: fixed; bottom: 0px; left: 0px; height: 3px; backgroun=
+d: rgb(68, 170, 153); width: 0%; transition: width 0.2s; }
+
+#rom-picker { display: none; position: fixed; inset: 0px; background: linea=
+r-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)) center center / cover,=
+ url("data:image/svg+xml;utf8,%3Csvg xmlns=3D'http://www.w3.org/2000/svg' v=
+iewBox=3D'0 0 6 6' preserveAspectRatio=3D'xMidYMid slice'%3E%3Cfilter id=3D=
+'b' x=3D'-10%25' y=3D'-10%25' width=3D'120%25' height=3D'120%25'%3E%3CfeGau=
+ssianBlur stdDeviation=3D'0.5'/%3E%3C/filter%3E%3Cg filter=3D'url(%23b)'%3E=
+%3Crect x=3D'0' y=3D'0' width=3D'1' height=3D'1' fill=3D'%2399d8ff'/%3E%3Cr=
+ect x=3D'1' y=3D'0' width=3D'1' height=3D'1' fill=3D'%23a5e1ff'/%3E%3Crect =
+x=3D'2' y=3D'0' width=3D'1' height=3D'1' fill=3D'%2380c9fa'/%3E%3Crect x=3D=
+'3' y=3D'0' width=3D'1' height=3D'1' fill=3D'%239dc1ea'/%3E%3Crect x=3D'4' =
+y=3D'0' width=3D'1' height=3D'1' fill=3D'%2399bad7'/%3E%3Crect x=3D'5' y=3D=
+'0' width=3D'1' height=3D'1' fill=3D'%235db2dd'/%3E%3Crect x=3D'0' y=3D'1' =
+width=3D'1' height=3D'1' fill=3D'%23a0daf0'/%3E%3Crect x=3D'1' y=3D'1' widt=
+h=3D'1' height=3D'1' fill=3D'%23a1d5f4'/%3E%3Crect x=3D'2' y=3D'1' width=3D=
+'1' height=3D'1' fill=3D'%23b7daf0'/%3E%3Crect x=3D'3' y=3D'1' width=3D'1' =
+height=3D'1' fill=3D'%23bdc5d4'/%3E%3Crect x=3D'4' y=3D'1' width=3D'1' heig=
+ht=3D'1' fill=3D'%23ad9195'/%3E%3Crect x=3D'5' y=3D'1' width=3D'1' height=
+=3D'1' fill=3D'%2397aab4'/%3E%3Crect x=3D'0' y=3D'2' width=3D'1' height=3D'=
+1' fill=3D'%238bcdec'/%3E%3Crect x=3D'1' y=3D'2' width=3D'1' height=3D'1' f=
+ill=3D'%2382ccf3'/%3E%3Crect x=3D'2' y=3D'2' width=3D'1' height=3D'1' fill=
+=3D'%23add4ed'/%3E%3Crect x=3D'3' y=3D'2' width=3D'1' height=3D'1' fill=3D'=
+%23c8aab3'/%3E%3Crect x=3D'4' y=3D'2' width=3D'1' height=3D'1' fill=3D'%23b=
+56034'/%3E%3Crect x=3D'5' y=3D'2' width=3D'1' height=3D'1' fill=3D'%239a9ca=
+0'/%3E%3Crect x=3D'0' y=3D'3' width=3D'1' height=3D'1' fill=3D'%237dc9e7'/%=
+3E%3Crect x=3D'1' y=3D'3' width=3D'1' height=3D'1' fill=3D'%238ad0f8'/%3E%3=
+Crect x=3D'2' y=3D'3' width=3D'1' height=3D'1' fill=3D'%2385bfe1'/%3E%3Crec=
+t x=3D'3' y=3D'3' width=3D'1' height=3D'1' fill=3D'%23a79ba3'/%3E%3Crect x=
+=3D'4' y=3D'3' width=3D'1' height=3D'1' fill=3D'%23a18167'/%3E%3Crect x=3D'=
+5' y=3D'3' width=3D'1' height=3D'1' fill=3D'%23709aa0'/%3E%3Crect x=3D'0' y=
+=3D'4' width=3D'1' height=3D'1' fill=3D'%2391cadc'/%3E%3Crect x=3D'1' y=3D'=
+4' width=3D'1' height=3D'1' fill=3D'%239ed5fa'/%3E%3Crect x=3D'2' y=3D'4' w=
+idth=3D'1' height=3D'1' fill=3D'%2398bdd4'/%3E%3Crect x=3D'3' y=3D'4' width=
+=3D'1' height=3D'1' fill=3D'%239f928d'/%3E%3Crect x=3D'4' y=3D'4' width=3D'=
+1' height=3D'1' fill=3D'%23a47a5c'/%3E%3Crect x=3D'5' y=3D'4' width=3D'1' h=
+eight=3D'1' fill=3D'%237a887d'/%3E%3Crect x=3D'0' y=3D'5' width=3D'1' heigh=
+t=3D'1' fill=3D'%2388c6e2'/%3E%3Crect x=3D'1' y=3D'5' width=3D'1' height=3D=
+'1' fill=3D'%2385d0f4'/%3E%3Crect x=3D'2' y=3D'5' width=3D'1' height=3D'1' =
+fill=3D'%237eb4c8'/%3E%3Crect x=3D'3' y=3D'5' width=3D'1' height=3D'1' fill=
+=3D'%2391837f'/%3E%3Crect x=3D'4' y=3D'5' width=3D'1' height=3D'1' fill=3D'=
+%23907647'/%3E%3Crect x=3D'5' y=3D'5' width=3D'1' height=3D'1' fill=3D'%236=
+68774'/%3E%3C/g%3E%3C/svg%3E"), rgb(0, 0, 0); color: rgb(221, 221, 221); z-=
+index: 10; padding: 32px 24px; box-sizing: border-box; overflow: hidden aut=
+o; flex-direction: column; align-items: center; justify-content: flex-start=
+; gap: 20px; }
+
+@media (max-width: 480px) {
+  #rom-picker { padding: 20px 14px; gap: 14px; }
+  #rom-instructions { padding-left: 16px; font-size: 13px; }
+  #rom-picker h1 { font-size: 18px; }
+}
+
+#rom-picker.visible { display: flex; }
+
+#rom-picker h1 { margin: 0px; font-size: 22px; font-weight: 600; }
+
+#rom-instructions { max-width: 600px; width: 100%; line-height: 1.5; font-s=
+ize: 14px; opacity: 0.85; padding-left: 20px; box-sizing: border-box; }
+
+#rom-instructions li { margin: 6px 0px; }
+
+#webkit-warning { max-width: 600px; width: 100%; line-height: 1.5; font-siz=
+e: 13px; color: rgb(244, 210, 122); background: rgba(190, 100, 30, 0.18); b=
+order: 1px solid rgba(244, 210, 122, 0.45); border-radius: 8px; padding: 12=
+px 16px; box-sizing: border-box; }
+
+#webkit-warning a { color: rgb(255, 230, 168); text-decoration: underline; =
+text-underline-offset: 2px; }
+
+#webkit-warning strong { color: rgb(255, 208, 104); }
+
+#rom-instructions a { color: rgb(221, 221, 221); text-decoration: underline=
+ rgba(255, 255, 255, 0.35); text-underline-offset: 2px; transition: color 0=
+.1s, text-decoration-color 0.1s; }
+
+#rom-instructions a:hover, #rom-instructions a:focus-visible { color: rgb(2=
+55, 255, 255); text-decoration-color: rgb(204, 204, 204); }
+
+#rom-instructions a:visited { color: rgb(221, 221, 221); }
+
+#rom-install-btn { font: inherit; color: rgb(221, 221, 221); background: rg=
+ba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); border-=
+radius: 4px; padding: 2px 8px; margin: 0px 2px; cursor: pointer; transition=
+: background 0.1s, border-color 0.1s; }
+
+#rom-install-btn:hover, #rom-install-btn:focus-visible { background: rgba(2=
+55, 255, 255, 0.18); border-color: rgba(255, 255, 255, 0.55); }
+
+#rom-drop { display: none; flex-direction: column; align-items: center; jus=
+tify-content: center; text-align: center; width: 100%; max-width: 600px; mi=
+n-height: 180px; border: 2px dashed rgb(136, 136, 136); border-radius: 12px=
+; padding: 24px; cursor: pointer; transition: background 0.15s, border-colo=
+r 0.15s; box-sizing: border-box; }
+
+#rom-drop:hover, #rom-drop.dragging { background: rgba(255, 255, 255, 0.08)=
+; border-color: rgb(204, 204, 204); }
+
+#rom-drop input { display: none; }
+
+#rom-drop .primary { font-size: 16px; margin-bottom: 4px; }
+
+#rom-drop .secondary { font-size: 12px; opacity: 0.65; }
+
+#rom-status, #rom-runtime-status { min-height: 1.4em; font-size: 13px; opac=
+ity: 0.85; display: flex; align-items: center; justify-content: flex-start;=
+ gap: 8px; width: 100%; max-width: 600px; }
+
+#rom-status.error, #rom-runtime-status.error { color: var(--status-err); op=
+acity: 1; }
+
+#rom-status.ok, #rom-runtime-status.ok { color: var(--status-ok); opacity: =
+1; }
+
+#rom-status .status-spinner, #rom-runtime-status .status-spinner { flex: 0 =
+0 auto; width: 14px; height: 14px; }
+
+#rom-saves { width: 100%; max-width: 600px; border-top: 1px solid rgb(34, 3=
+4, 34); padding-top: 16px; }
+
+.rom-saves-heading { font-size: 13px; font-weight: 600; text-transform: upp=
+ercase; letter-spacing: 0.04em; color: rgb(170, 170, 170); margin-bottom: 4=
+px; }
+
+.rom-saves-help { font-size: 12px; opacity: 0.65; margin-bottom: 10px; }
+
+.rom-saves-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;=
+ }
+
+@media (max-width: 480px) {
+  .rom-saves-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+.rom-saves-slot { display: flex; flex-direction: column; gap: 6px; padding:=
+ 12px; border: 1px solid rgb(34, 34, 34); border-radius: 6px; background: r=
+gba(255, 255, 255, 0.02); }
+
+.rom-saves-slot-label { font-size: 13px; font-weight: 600; color: rgb(221, =
+221, 221); }
+
+.rom-saves-slot-state { font-size: 12px; opacity: 0.7; min-height: 1.4em; w=
+ord-break: break-all; display: flex; align-items: center; gap: 8px; }
+
+.rom-saves-slot-state .status-spinner { flex: 0 0 auto; width: 14px; height=
+: 14px; }
+
+.rom-saves-slot.has-data .rom-saves-slot-state { opacity: 1; color: var(--s=
+tatus-ok); flex-direction: column; align-items: flex-start; gap: 2px; }
+
+.rom-saves-slot-state-info { font-size: 11px; opacity: 0.75; color: rgb(221=
+, 221, 221); }
+
+.rom-saves-slot-actions { display: flex; gap: 6px; margin-top: 4px; flex-wr=
+ap: wrap; }
+
+.rom-saves-btn { flex: 1 1 auto; padding: 6px 10px; background: rgb(26, 26,=
+ 26); color: rgb(221, 221, 221); border: 1px solid rgb(136, 136, 136); bord=
+er-radius: 6px; font-style: inherit; font-variant: inherit; font-weight: in=
+herit; font-stretch: inherit; line-height: inherit; font-family: inherit; f=
+ont-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inher=
+it; font-feature-settings: inherit; font-variation-settings: inherit; font-=
+language-override: inherit; font-size: 12px; cursor: pointer; transition: b=
+ackground 0.1s, border-color 0.1s; }
+
+.rom-saves-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.08)=
+; border-color: rgb(204, 204, 204); }
+
+.rom-saves-btn-secondary { border-color: rgb(85, 85, 85); flex: 0 1 auto; }
+
+.rom-saves-btn-secondary:hover:not(:disabled) { background: rgba(255, 90, 9=
+0, 0.08); border-color: rgb(204, 102, 102); }
+
+.rom-saves-btn:disabled { opacity: 0.4; cursor: default; }
+
+.rom-saves-status { min-height: 1.4em; font-size: 13px; opacity: 0.85; marg=
+in-top: 8px; }
+
+#settings-menu .rom-saves-status { min-height: 0px; margin-top: 12px; }
+
+#settings-install-section { margin-top: 24px; }
+
+#settings-menu .rom-saves-status:empty { display: none; }
+
+.rom-saves-status.error { color: var(--status-err); opacity: 1; }
+
+.rom-saves-status.ok { color: var(--status-ok); opacity: 1; }
+
+#rom-start { margin-top: 8px; margin-bottom: 24px; padding: 12px 24px; back=
+ground: rgb(26, 26, 26); color: rgb(221, 221, 221); border: 1px solid rgb(2=
+21, 221, 221); border-radius: 6px; font-style: inherit; font-variant: inher=
+it; font-stretch: inherit; line-height: inherit; font-family: inherit; font=
+-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit;=
+ font-feature-settings: inherit; font-variation-settings: inherit; font-lan=
+guage-override: inherit; font-size: 15px; font-weight: 600; cursor: pointer=
+; min-width: 200px; transition: background 0.1s, border-color 0.1s, opacity=
+ 0.1s; }
+
+#rom-start:hover:not(:disabled) { background: rgba(255, 255, 255, 0.1); bor=
+der-color: rgb(204, 204, 204); }
+
+#rom-start:disabled { opacity: 0.4; cursor: not-allowed; border-color: rgb(=
+68, 68, 68); }
+
+#loading-overlay { display: none; position: fixed; inset: 0px; z-index: 8; =
+background: rgb(0, 0, 0); color: rgb(221, 221, 221); align-items: center; j=
+ustify-content: center; flex-direction: column; gap: 14px; pointer-events: =
+none; }
+
+#loading-overlay.visible { display: flex; }
+
+#loading-overlay svg { opacity: 0.85; }
+
+#settings-gear, #fullscreen-toggle, #audio-toggle, #tc-style-swap { display=
+: none; position: fixed; top: calc(8px + env(safe-area-inset-top)); z-index=
+: 5; width: 32px; height: 32px; padding: 0px; border: 1px solid rgba(255, 2=
+55, 255, 0.15); border-radius: 6px; background: rgba(0, 0, 0, 0.45); color:=
+ rgb(221, 221, 221); font-size: 18px; line-height: 1; cursor: pointer; opac=
+ity: 0.6; transition: opacity 0.15s, background 0.15s, border-color 0.15s; =
+align-items: center; justify-content: center; }
+
+#settings-gear { right: calc(8px   + env(safe-area-inset-right)); }
+
+#fullscreen-toggle { right: calc(48px  + env(safe-area-inset-right)); font-=
+size: 16px; }
+
+#audio-toggle { right: calc(88px  + env(safe-area-inset-right)); font-size:=
+ 16px; }
+
+#tc-style-swap { right: calc(128px + env(safe-area-inset-right)); font-size=
+: 16px; }
+
+#fullscreen-toggle .fs-icon-collapse { display: none; }
+
+#fullscreen-toggle.is-fullscreen .fs-icon-expand { display: none; }
+
+#fullscreen-toggle.is-fullscreen .fs-icon-collapse { display: inline; }
+
+#audio-toggle .audio-icon-off { display: none; }
+
+#audio-toggle.is-muted .audio-icon-on { display: none; }
+
+#audio-toggle.is-muted .audio-icon-off { display: inline; }
+
+#settings-gear:hover, #fullscreen-toggle:hover, #audio-toggle:hover, #tc-st=
+yle-swap:hover { opacity: 1; background: rgba(0, 0, 0, 0.7); border-color: =
+rgba(255, 255, 255, 0.35); }
+
+#settings-menu { color: rgb(221, 221, 221); background: rgb(17, 17, 17); bo=
+rder: 1px solid rgb(51, 51, 51); border-radius: 8px; padding: 0px; max-widt=
+h: 560px; width: 90vw; max-height: 90vh; font-family: inherit; }
+
+#settings-menu[open] { display: flex; flex-direction: column; }
+
+#settings-menu::backdrop { background: rgba(0, 0, 0, 0.6); }
+
+#settings-menu .menu-body { padding: 20px 24px; overflow-y: auto; flex: 1 1=
+ auto; min-height: 0px; }
+
+#settings-menu h2 { margin: 0px 0px 16px; font-size: 18px; font-weight: 600=
+; }
+
+#settings-menu h3 { margin: 18px 0px 8px; font-size: 13px; font-weight: 600=
+; text-transform: uppercase; letter-spacing: 0.04em; color: rgb(170, 170, 1=
+70); }
+
+#settings-menu h3:first-of-type { margin-top: 0px; }
+
+#settings-install-section .settings-install-help { margin: 0px 0px 8px; fon=
+t-size: 13px; opacity: 0.7; line-height: 1.4; }
+
+#settings-install-btn { font-style: inherit; font-variant: inherit; font-we=
+ight: inherit; font-stretch: inherit; line-height: inherit; font-family: in=
+herit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kernin=
+g: inherit; font-feature-settings: inherit; font-variation-settings: inheri=
+t; font-language-override: inherit; font-size: 13px; padding: 6px 14px; bor=
+der-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.25); background: r=
+gba(255, 255, 255, 0.08); color: inherit; cursor: pointer; }
+
+#settings-install-btn:hover { background: rgba(255, 255, 255, 0.14); }
+
+#settings-menu .row { display: flex; gap: 8px; flex-wrap: wrap; align-items=
+: center; margin-bottom: 6px; font-size: 13px; }
+
+#settings-menu .row label, #settings-menu .row select, #settings-menu .row =
+input { font-family: inherit; font-size: 13px; color: inherit; }
+
+#settings-menu .row label { min-width: 90px; }
+
+#settings-menu .row select { background: rgb(26, 26, 26); border: 1px solid=
+ rgb(51, 51, 51); border-radius: 4px; padding: 4px 6px; cursor: pointer; }
+
+#settings-menu .row input[type=3D"range"] { flex: 1 1 auto; min-width: 120p=
+x; }
+
+#settings-menu button.action { flex: 1 1 auto; min-width: 140px; padding: 8=
+px 12px; background: rgb(26, 26, 26); color: rgb(221, 221, 221); border: 1p=
+x solid rgb(68, 170, 153); border-radius: 6px; font-style: inherit; font-va=
+riant: inherit; font-weight: inherit; font-stretch: inherit; line-height: i=
+nherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjus=
+t: inherit; font-kerning: inherit; font-feature-settings: inherit; font-var=
+iation-settings: inherit; font-language-override: inherit; font-size: 13px;=
+ cursor: pointer; transition: background 0.1s, border-color 0.1s; }
+
+#settings-menu button.action:hover:not(:disabled) { background: rgba(74, 15=
+3, 89, 0.12); border-color: var(--status-ok); }
+
+#settings-menu button.action:disabled { opacity: 0.5; cursor: default; }
+
+#settings-menu .toggle { display: flex; align-items: center; gap: 10px; cur=
+sor: pointer; user-select: none; font-size: 13px; }
+
+#settings-menu .toggle input { width: 16px; height: 16px; cursor: pointer; =
+}
+
+#settings-menu .status { font-size: 12px; opacity: 0.75; min-height: 1.2em;=
+ margin-top: 4px; }
+
+#settings-menu .status.error { color: var(--status-err); opacity: 1; }
+
+#settings-menu .status.ok { color: var(--status-ok); opacity: 1; }
+
+#settings-menu table.controls { width: 100%; border-collapse: collapse; fon=
+t-size: 13px; }
+
+#settings-menu table.controls th, #settings-menu table.controls td { text-a=
+lign: left; padding: 4px 8px; border-bottom: 1px solid rgb(34, 34, 34); }
+
+#settings-menu table.controls th { color: rgb(170, 170, 170); font-weight: =
+600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+#settings-menu .menu-footer { display: flex; align-items: center; justify-c=
+ontent: space-between; padding: 12px 24px; border-top: 1px solid rgb(34, 34=
+, 34); flex: 0 0 auto; background: rgb(17, 17, 17); }
+
+#settings-menu .menu-footer button { padding: 6px 14px; background: rgb(34,=
+ 34, 34); color: rgb(221, 221, 221); border: 1px solid rgb(68, 68, 68); bor=
+der-radius: 6px; font-style: inherit; font-variant: inherit; font-weight: i=
+nherit; font-stretch: inherit; line-height: inherit; font-family: inherit; =
+font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inhe=
+rit; font-feature-settings: inherit; font-variation-settings: inherit; font=
+-language-override: inherit; font-size: 13px; cursor: pointer; }
+
+#settings-menu .menu-footer button:hover { background: rgb(42, 42, 42); bor=
+der-color: rgb(102, 102, 102); }
+
+#touch-controls { --tc-bg-alpha: 0.18; --tc-bg-pressed-alpha: 0.45; --tc-st=
+roke-alpha: 0.40; --tc-label-alpha: 0.92; --tc-label-rgb: 255, 255, 255; --=
+tc-upper-bottom: 170px; --tc-cstick-h: 200px; --tc-dpad-cell: 40px; --tc-fa=
+ce-a-size: 70px; --tc-face-b-size: 56px; --tc-face-y-size: 50px; --tc-face-=
+x-size: 50px; --tc-face-y-dy: 20px; position: fixed; inset: 0px; pointer-ev=
+ents: none; z-index: 5; display: none; user-select: none; }
+
+#touch-controls.visible { display: block; }
+
+#touch-controls .tc-button { position: absolute; pointer-events: auto; touc=
+h-action: none; -webkit-tap-highlight-color: transparent; }
+
+#touch-controls .tc-button svg { width: 100%; height: 100%; display: block;=
+ overflow: visible; }
+
+#touch-controls .tc-bg { fill: rgba(255, 255, 255, var(--tc-bg-alpha)); str=
+oke: rgba(255, 255, 255, var(--tc-stroke-alpha)); stroke-width: 2; transiti=
+on: fill 0.05s; }
+
+#touch-controls .pressed .tc-bg { fill: rgba(255, 255, 255, var(--tc-bg-pre=
+ssed-alpha)); }
+
+#touch-controls #tc-a .tc-bg { fill: rgba(120, 230, 130, var(--tc-bg-alpha)=
+); }
+
+#touch-controls #tc-a.pressed .tc-bg { fill: rgba(120, 230, 130, var(--tc-b=
+g-pressed-alpha)); }
+
+#touch-controls #tc-b .tc-bg { fill: rgba(230, 110, 110, var(--tc-bg-alpha)=
+); }
+
+#touch-controls #tc-b.pressed .tc-bg { fill: rgba(230, 110, 110, var(--tc-b=
+g-pressed-alpha)); }
+
+#touch-controls #tc-z .tc-bg { fill: rgba(180, 130, 230, var(--tc-bg-alpha)=
+); }
+
+#touch-controls #tc-z.pressed .tc-bg { fill: rgba(180, 130, 230, var(--tc-b=
+g-pressed-alpha)); }
+
+#touch-controls .tc-label { font-size: 24px; fill: rgba(var(--tc-label-rgb)=
+, var(--tc-label-alpha)); font-family: "Fragment Mono", ui-monospace, "SF M=
+ono", Menlo, Consolas, monospace; font-weight: 600; text-anchor: middle; do=
+minant-baseline: central; paint-order: stroke; stroke: rgba(0, 0, 0, 0.4); =
+stroke-width: 1; }
+
+#touch-controls #tc-start .tc-label { font-size: 14px; }
+
+#touch-controls .tc-arrow { fill: rgb(var(--tc-label-rgb)); stroke: rgb(var=
+(--tc-label-rgb)); stroke-width: 4; stroke-linejoin: round; opacity: var(--=
+tc-label-alpha); }
+
+#tc-stick-zone { position: absolute; pointer-events: auto; touch-action: no=
+ne; }
+
+#tc-stick-zone .nipple { z-index: 5; }
+
+#tc-stick-zone .nipple .back { opacity: 0.55 !important; }
+
+#tc-stick-zone .nipple .front { opacity: 0.75 !important; }
+
+#tc-stick-hint { position: absolute; pointer-events: none; width: 110px; he=
+ight: 110px; left: 50%; bottom: 60px; transform: translateX(-50%); transiti=
+on: opacity 0.15s; opacity: 1; }
+
+#touch-controls.stick-active #tc-stick-hint { opacity: 0; }
+
+#tc-stick-hint .hint-bg { fill: rgba(255, 255, 255, var(--tc-bg-alpha)); st=
+roke: rgba(255, 255, 255, var(--tc-stroke-alpha)); stroke-width: 2; }
+
+#tc-stick-hint .hint-knob { fill: rgba(255, 255, 255, calc(var(--tc-bg-alph=
+a) + 0.15)); }
+
+#touch-controls.layout-a #tc-stick-hint { bottom: 78px; }
+
+#touch-controls.layout-b #tc-stick-hint { bottom: 98px; left: 100px; }
+
+#touch-controls.style-simplified #tc-a { width: 86px; height: 86px; }
+
+#touch-controls.style-simplified #tc-b { width: 70px; height: 70px; }
+
+#touch-controls.style-simplified #tc-y { width: 64px; height: 64px; }
+
+#touch-controls.style-simplified #tc-x { width: 64px; height: 64px; }
+
+#touch-controls.style-simplified #tc-start { width: 64px; height: 32px; }
+
+#touch-controls #tc-dpad { display: none; }
+
+#touch-controls.layout-a #tc-stick-zone { left: 0px; bottom: 0px; width: 50=
+%; height: 60%; }
+
+#touch-controls.layout-a #tc-a { right: 28px; bottom: 90px; }
+
+#touch-controls.layout-a #tc-b { right: 110px; bottom: 38px; }
+
+#touch-controls.layout-a #tc-y { right: 100px; bottom: 152px; }
+
+#touch-controls.layout-a #tc-x { right: 28px; bottom: 176px; }
+
+#touch-controls.layout-a #tc-start { right: 70px; bottom: 240px; }
+
+#touch-controls.layout-b #tc-stick-zone { left: 0px; top: 0px; width: 40%; =
+height: 100%; }
+
+#touch-controls.layout-b #tc-a { right: 36px; bottom: 110px; }
+
+#touch-controls.layout-b #tc-b { right: 118px; bottom: 50px; }
+
+#touch-controls.layout-b #tc-y { right: 108px; bottom: 172px; }
+
+#touch-controls.layout-b #tc-x { right: 36px; bottom: 196px; }
+
+#touch-controls.layout-b #tc-start { right: 80px; bottom: 260px; }
+
+#touch-controls #tc-z, #touch-controls #tc-l, #touch-controls #tc-r, #touch=
+-controls #tc-dpad-up, #touch-controls #tc-dpad-down, #touch-controls #tc-d=
+pad-left, #touch-controls #tc-dpad-right, #touch-controls #tc-cstick-zone {=
+ display: none; }
+
+#touch-controls.style-simplified #tc-dpad, #touch-controls.style-simplified=
+ #tc-z, #touch-controls.style-simplified #tc-l, #touch-controls.style-simpl=
+ified #tc-r, #touch-controls.style-simplified #tc-dpad-up, #touch-controls.=
+style-simplified #tc-dpad-down, #touch-controls.style-simplified #tc-dpad-l=
+eft, #touch-controls.style-simplified #tc-dpad-right, #touch-controls.style=
+-simplified #tc-cstick-zone { display: none; }
+
+#touch-controls.style-full #tc-stick-hint, #touch-controls.style-full #tc-c=
+stick-hint { top: 50%; bottom: auto; transform: translate(-50%, -50%); }
+
+#touch-controls.layout-a.style-full #tc-stick-hint { left: 100px; }
+
+#touch-controls.layout-b.style-full #tc-stick-hint { left: 110px; top: 65%;=
+ }
+
+#touch-controls.style-full #tc-dpad { display: none; }
+
+#touch-controls.style-full #tc-x, #touch-controls.style-full #tc-z, #touch-=
+controls.style-full #tc-l, #touch-controls.style-full #tc-r, #touch-control=
+s.style-full #tc-dpad-up, #touch-controls.style-full #tc-dpad-down, #touch-=
+controls.style-full #tc-dpad-left, #touch-controls.style-full #tc-dpad-righ=
+t { display: block; }
+
+#touch-controls.style-full #tc-cstick-zone { display: block; }
+
+#tc-cstick-zone { position: absolute; pointer-events: auto; touch-action: n=
+one; user-select: none; }
+
+#tc-cstick-hint { position: absolute; width: 110px; height: 110px; pointer-=
+events: none; left: 50%; bottom: 60px; transform: translateX(-50%); transit=
+ion: opacity 0.15s; opacity: 1; }
+
+#touch-controls.cstick-active #tc-cstick-hint { opacity: 0; }
+
+#tc-cstick-zone .nipple .back { background: rgba(230, 220, 130, 0.55) !impo=
+rtant; opacity: 1 !important; }
+
+#tc-cstick-zone .nipple .front { background: rgba(230, 220, 130, 0.85) !imp=
+ortant; opacity: 1 !important; }
+
+#tc-cstick-hint .hint-bg { fill: rgba(230, 220, 130, var(--tc-bg-alpha)); s=
+troke: rgba(230, 220, 130, var(--tc-stroke-alpha)); stroke-width: 2; }
+
+#tc-cstick-hint .hint-knob { fill: rgba(230, 220, 130, calc(var(--tc-bg-alp=
+ha) + 0.15)); }
+
+#tc-cstick-hint .tc-label { font-size: 12px; stroke: none; }
+
+#tc-cstick-zone .nipple .front { position: relative; }
+
+#tc-cstick-zone .nipple .front::after { content: "C"; position: absolute; i=
+nset: 0px; display: flex; align-items: center; justify-content: center; fon=
+t-family: "Fragment Mono", ui-monospace, "SF Mono", Menlo, Consolas, monosp=
+ace; font-size: 18px; font-weight: 600; color: rgba(255, 255, 255, 0.95); p=
+ointer-events: none; }
+
+#tc-dpad-cluster, #tc-face-cluster, #tc-shoulder-row { display: contents; }
+
+#touch-controls.style-full #tc-dpad-cluster > .tc-button, #touch-controls.s=
+tyle-full #tc-face-cluster > .tc-button { position: static; }
+
+#touch-controls.style-full #tc-dpad-cluster > .tc-button { width: 100%; hei=
+ght: 100%; }
+
+#touch-controls.style-full #tc-face-cluster > .tc-button { place-self: cent=
+er; }
+
+#touch-controls.style-full #tc-dpad-cluster { display: grid; position: abso=
+lute; pointer-events: none; }
+
+#touch-controls.style-full #tc-dpad-cluster > .tc-button { pointer-events: =
+auto; }
+
+#touch-controls.style-full #tc-dpad-cluster #tc-dpad-up { grid-area: 1 / 2;=
+ }
+
+#touch-controls.style-full #tc-dpad-cluster #tc-dpad-left { grid-area: 2 / =
+1; }
+
+#touch-controls.style-full #tc-dpad-cluster #tc-dpad-right { grid-area: 2 /=
+ 3; }
+
+#touch-controls.style-full #tc-dpad-cluster #tc-dpad-down { grid-area: 3 / =
+2; }
+
+#touch-controls.style-full #tc-face-cluster { display: grid; position: abso=
+lute; pointer-events: none; grid-template-areas: ". X" "Y ." ". A" "B ."; }
+
+#touch-controls.style-full #tc-face-cluster > .tc-button { pointer-events: =
+auto; }
+
+#touch-controls.style-full #tc-face-cluster #tc-x { grid-area: X; }
+
+#touch-controls.style-full #tc-face-cluster #tc-y { grid-area: Y; }
+
+#touch-controls.style-full #tc-face-cluster #tc-a { grid-area: A; }
+
+#touch-controls.style-full #tc-face-cluster #tc-b { grid-area: B; }
+
+#touch-controls.style-full #tc-cstick-zone { right: 0px; bottom: 0px; top: =
+auto; height: var(--tc-cstick-h); }
+
+#touch-controls.style-full #tc-dpad-cluster { left: auto; right: auto; top:=
+ auto; grid-template-columns: var(--tc-dpad-cell) var(--tc-dpad-cell) var(-=
+-tc-dpad-cell); grid-template-rows: var(--tc-dpad-cell) var(--tc-dpad-cell)=
+ var(--tc-dpad-cell); }
+
+#touch-controls.style-full #tc-face-cluster { bottom: var(--tc-upper-bottom=
+); top: auto; grid-template-columns: var(--tc-face-b-size) var(--tc-face-a-=
+size); grid-template-rows: 18px 18px var(--tc-face-a-size) var(--tc-face-b-=
+size); }
+
+#touch-controls.style-full #tc-face-cluster #tc-a { width: var(--tc-face-a-=
+size); height: var(--tc-face-a-size); }
+
+#touch-controls.style-full #tc-face-cluster #tc-b { width: var(--tc-face-b-=
+size); height: var(--tc-face-b-size); transform: translateY(-30px); }
+
+#touch-controls.style-full #tc-face-cluster #tc-y { width: var(--tc-face-y-=
+size); height: var(--tc-face-y-size); align-self: end; transform: translate=
+Y(var(--tc-face-y-dy)); }
+
+#touch-controls.style-full #tc-face-cluster #tc-x { width: var(--tc-face-x-=
+size); height: var(--tc-face-x-size); place-self: end start; transform: tra=
+nslate(8px, 10px); }
+
+#touch-controls.style-full #tc-l { width: 52px; height: 28px; }
+
+#touch-controls.style-full #tc-r { width: 52px; height: 28px; }
+
+#touch-controls.style-full #tc-z { width: 44px; height: 28px; }
+
+#touch-controls.style-full #tc-start { width: 56px; height: 28px; }
+
+#touch-controls.layout-a.style-full #tc-stick-zone { left: 0px; bottom: var=
+(--tc-upper-bottom); width: 45%; height: var(--tc-cstick-h); }
+
+#touch-controls.layout-a.style-full #tc-cstick-zone { width: 45%; }
+
+#touch-controls.layout-a.style-full #tc-dpad-cluster { left: 40px; bottom: =
+28px; }
+
+#touch-controls.layout-a.style-full #tc-face-cluster { right: 14px; }
+
+#touch-controls.layout-a.style-full #tc-shoulder-row { display: flex; posit=
+ion: absolute; left: 0px; right: 0px; bottom: 410px; align-items: center; j=
+ustify-content: space-between; padding: 0px 14px; pointer-events: none; box=
+-sizing: border-box; }
+
+#touch-controls.layout-a.style-full #tc-shoulder-row > .tc-button { positio=
+n: static; pointer-events: auto; }
+
+#touch-controls.layout-b { --tc-face-a-size: 76px; --tc-face-b-size: 60px; =
+--tc-face-y-size: 56px; --tc-face-y-dy: 22px; }
+
+#touch-controls.layout-b.style-full #tc-stick-zone { left: 0px; bottom: var=
+(--tc-upper-bottom); top: auto; width: 30%; height: 280px; }
+
+#touch-controls.layout-b.style-full #tc-cstick-zone { width: 25%; }
+
+#touch-controls.layout-b.style-full #tc-dpad-cluster { left: 100px; bottom:=
+ 40px; }
+
+#touch-controls.layout-b.style-full #tc-face-cluster { right: 30px; }
+
+#touch-controls.layout-b.style-full #tc-l { inset: 14px auto auto 240px; }
+
+#touch-controls.layout-b.style-full #tc-r { inset: 14px 240px auto auto; }
+
+#touch-controls.layout-b.style-full #tc-z { inset: 14px 300px auto auto; }
+
+#touch-controls.layout-b.style-full #tc-start { inset: 14px auto auto 50%; =
+transform: translateX(-50%); }
+------MultipartBoundary--xPcp8rXAg3QIuveKedqWP4LaLxSc2xt3nqydYZYzaY------

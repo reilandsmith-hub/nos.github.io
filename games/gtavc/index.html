@@ -589,18 +589,6 @@
     <script type='text/javascript' src="jsdos-cloud-sdk.js"></script>
     <script type='text/javascript' src="idbfs.js"></script>
     <script type='text/javascript' src="game.js"></script>
-    <script>
-    try {
-        const host = window.parent.location.host;
-        console.log("The host:", host);
-        if ((!host.endsWith("dos.zone") || host.endsWith("cdn.dos.zone")) && !host.startsWith("localhost") &&
-            !host.startsWith("192.168.0.") && !host.startsWith("test.js-dos.com")) {
-            location.href = "https://dos.zone/ru/grand-theft-auto-vice-city/";
-        }
-    } catch (e) {
-        // ignore
-    }
-    </script>
 </body>
 
 </html>

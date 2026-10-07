@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple File Selection</title>
+</head>
+<body>
+    <h1>Select Files</h1>
+    <input type="file" id="fileInput" webkitdirectory directory>
+    <br><br>
+    <script>
+        let filesMap = new Map();
+        async function readFileAsync(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = reject;
+                reader.readAsArrayBuffer(file);
+            });
+        }
+
+        document.getElementById('fileInput').addEventListener('change', async function(event) {
+            filesMap = new Map(Array.from(event.target.files).map(file => [file.webkitRelativePath, file]));
+        });
+
+        let reportedProgress = 0;
+        let currentFile = 0;
+        let initialFiles = [];
+        window.addEventListener('message', async (event) => {
+            const data = event.data;
+            if (data.event === 'module.initfs') {
+                const preloadFiles = await (await fetch("preload_files.list")).text();
+                initialFiles = new Set(preloadFiles.split('\n')
+                    .map(line => line.trim().toLowerCase())
+                    .filter(line => line.length > 0 && line[0] !== '#' && filesMap.has(line)));
+                initialFiles = Array.from(initialFiles);
+
+                currentFile = -1;
+                event.source.postMessage({ event: '>module.initfs', files: initialFiles.length }, '*');
+            } else if (data.event === 'module.initfile') {
+                currentFile++;
+                const newProgress = Math.floor((currentFile / initialFiles.length) * 100);
+                if (newProgress > reportedProgress) {
+                    reportedProgress = newProgress;
+                    console.log(reportedProgress + "% " + currentFile + " of " + initialFiles.length);
+                }
+                if (currentFile < initialFiles.length) {
+                    const path = initialFiles[currentFile];
+                    const data = await readFileAsync(filesMap.get(path));
+                    event.source.postMessage({ 
+                        event: '>module.initfile',
+                        path, 
+                        data: new Uint8Array(data),
+                    }, '*', [data]);
+                } else {
+                    console.error('No more files to provide');
+                }
+            } else if (data.event === 'module.getasyncurl' && data.file) {
+                const file = filesMap.get(data.file);
+                if (file) {
+                    const buffer = await readFileAsync(file);
+                    event.source.postMessage({
+                        event: '>module.getasyncurl',
+                        file: data.file,
+                        data: new Uint8Array(buffer),
+                    }, '*', [buffer]);
+                } else {
+                    event.source.postMessage({
+                        event: '>module.getasyncurl',
+                        file: data.file,
+                    }, '*');
+                }
+            }
+        });
+    </script>
+    <iframe src="index.html" style="width: 1280px; height: 720px;"></iframe>
+</body>
+</html>
+
+
+
+

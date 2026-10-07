@@ -1,4 +1,1 @@
-## stardew valley web port
-pls report issues here. give credits if you add to your site. play at [degloved.net](https://degloved.net/games/public/gms/stardew-valley/index.html)
-
-one day ill re-port this and make it open source
+<b>function over form</b> is a website created after the end of gn-civics and gn2, meant to be more experimental than the original game sites from sophomore year.
